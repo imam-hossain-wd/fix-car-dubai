@@ -1,0 +1,92 @@
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
+
+
+export const SiteConfig = {
+  authorName: "Md Saiful Islam",
+  brandName: "Fix Car Dubai",
+  url: "https://fixcardubai.com",
+  email: "fixcardubai@gmail.com",
+  description: "Your On-Demand Car Savior Anywhere, Anytime in Dubai!",
+  displayNumber: "+971 56 870 3512",
+  callNumber: "+971568703512",
+  whatsappNumber: "+971568703512",
+  location: "Al Karama, Dubai - UAE",
+  coordinate: "25.2485396,55.2875283",
+  serviceAreas: [
+    "Al Karama",
+    "Oud Metha",
+    "Al Hamriya",
+    "Al Jaffiliya",
+    "Zabeel",
+    "Al Fahidi",
+    "Al Raffa",
+    "Al Mina",
+    "Al Hudaiba",
+    "Al Jaddaf"
+  ],
+  city: "Dubai",
+  country: "UAE",
+  services: [
+    {
+      title: "Car Battery Replacement Dubai",
+      href: "/services/car-battery-replacement-dubai"
+    },
+    {
+      title: "Car Brake Pad Repair Dubai",
+      href: "/services/car-brake-pad-repair-dubai"
+    },
+    {
+      title: "Engine Oil Change Dubai",
+      href: "/services/engine-oil-change-dubai"
+    },
+    {
+      title: "Air Conditioner Repair Dubai",
+      href: "/services/air-conditioner-repair-dubai"
+    },
+    {
+      title: "Car Radiator Service Dubai",
+      href: "/services/car-radiator-service-dubai"
+    },
+    {
+      title: "Gearbox Repair & Service Dubai",
+      href: "/services/gearbox-repair-service-dubai"
+    },
+    {
+      title: "Car Maintenance Dubai",
+      href: "/services/car-maintenance-dubai"
+    }
+  ],
+
+  navItems: [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Areas We Serve", href: "/area-we-serve" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
+    { name: "Gallery", href: "/gallery" }
+  ],
+  footerhrefs: [
+    { title: "About Us", href: "/about" },
+    { title: "Contact", href: "/contact" },
+    { title: "Blog", href: "/blog" },
+    { title: "Privacy Policy", href: "/privacy" },
+    { title: "Sitemap", href: "/sitemap.xml" }
+  ],
+
+  socialLinks: [
+    { name: "Facebook", icon: Facebook, href: "https://facebook.com/fixcardubai" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com/fixcardubai" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com/fixcardubai" },
+    { name: "YouTube", icon: Youtube, href: "https://youtube.com/fixcardubai" }
+  ],
+  contactLinks: [
+    { name: "Map", icon: MapPin, href: "https://maps.app.goo.gl/SPtYU8eEz5jw8fDa7" },
+    { name: "Phone", icon: Phone, href: "tel:+971568703512" },
+    { name: "Email", icon: Mail, href: "mailto:fixcardubai@gmail.com" }
+  ]
+}
+
+const {
+  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, whatsappNumber, callNumber, displayNumber, description, email, url, brandName, authorName
+} = SiteConfig;

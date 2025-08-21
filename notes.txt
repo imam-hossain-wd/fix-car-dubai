@@ -1,0 +1,35 @@
+{/* <div className="border-b bg-primary/10 text-sm ">
+        <div className="container mx-auto py-2 flex items-center justify-between ">
+          <div className="flex items-center justify-center gap-2 ml-2">
+            <Link href="tel:+971568703512" className="flex items-center gap-1">
+              <Phone className="h-4 w-4 text-primary" />
+              <p>+971 56 870 3512</p>
+            </Link>
+            <Link
+              href="mailto:24carservicedubai@gmail.com"
+              className="flex items-center gap-1 hover:underline transition-colors hover:text-primary"
+            >
+              <Mail className="h-4 w-4 text-primary" />
+              <span>24carservicedubai@gmail.com</span>
+            </Link>
+
+            <div className="flex items-center gap-1 md:flex">
+              <MapPin className="h-4 w-4 text-primary" />
+              <span>Al Satwa, Dubai</span>
+            </div>
+          </div>
+
+          <div className="lg:flex items-center hidden  gap-2 lg:gap-4">
+            {socialLinks.map((social) => (
+              <Link
+                key={social.name}
+                href={social.href}
+                className="text-muted-foreground hover:text-primary"
+                aria-label={social.name}
+              >
+                <social.icon className="h-4 w-4" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div> */}
