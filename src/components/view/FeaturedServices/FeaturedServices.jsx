@@ -303,7 +303,7 @@ const ServicesGrid = ({ services }) => {
 // Main Featured Services Component
 export default function FeaturedServices() {
   return (
-    <section className="relative py-16 md:py-24 bg-gray-50 overflow-hidden">
+    <section className="relative py-10 md:py-10 bg-gray-50 overflow-hidden">
       <div className="container relative mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
