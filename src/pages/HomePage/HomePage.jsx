@@ -1,7 +1,7 @@
 
 
 import { FAQSection } from '@/components/view/FAQSection/FAQSection'
-import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
+// import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 import HomeBanner from '@/components/view/Home/HomeBanner/HomeBanner'
 import Reviews from '@/components/view/Reviews/Reviews'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
@@ -14,6 +14,9 @@ import { getOrganizationSchema } from '@/schemas/organizationSchema'
 import { SeoHead } from '@/seo/SeoHead'
 import Script from 'next/script'
 import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
+import VideoSlider from '@/components/view/VideoSlider/VideoSlider'
+import ServicesSection from '@/components/Services'
+import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 
 
 
@@ -45,12 +48,14 @@ export default function HomePage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
             )}
-            {/* <HomeBanner /> */}
-            {/* <PremiumServiceSlider />
-            <ServicesSection />
+            <HomeBanner />
+            {/* <FeaturedServices /> */}
+
             <FeaturedServices />
+            {/* <VideoSlider /> */}
+            {/* <PremiumServiceSlider />
             <GalleryCarousel />
-            <VideoSlider />
+            <ServicesSection />
             <TrustedService />
             <BlogPage />
             <WhoWeAre />

@@ -12,7 +12,8 @@ const nextConfig = {
       'img.freepik.com',
       'i.ibb.co', 
       'res.cloudinary.com',
-      '/www.freepik.com'
+      '/www.freepik.com',
+      'images.pexels.com'
       // Add any other domains you need here
     ],
   },
