@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/config/site";
-import { bandlogo } from "@/utils/assets";
 import Logo from "../Logo/Logo";
 import NavDrawer from "./NavDrawer";
 
