@@ -6,9 +6,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/ui/shared/Footer/Footer";
 import { Navbar } from "@/components/ui/shared/Navbar/Navbar";
-import { FloatingButtons } from "@/components/ui/shared/Buttons/FloatingButtons/FloatingButtons";
-import { MobileBottomNav } from "@/components/ui/shared/Navbar/MobileBottomNav";
-import { FloatingButton } from "@/components/ui/shared/FloatingButton/FloatingButton";
+import { FloatingButtons } from "@/components/ui/shared/FloatingButtons/FloatingButtons";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,8 +39,8 @@ export default function RootLayout({ children }) {
           <SpeedInsights/>
           <Analytics />
           {/* <FloatingButtons /> */}
-          {/* <MobileBottomNav />
-          <FloatingButton /> */}
+          {/* <MobileBottomNav /> */}
+          <FloatingButtons/>
           <Footer />
         </div>
       </body>
