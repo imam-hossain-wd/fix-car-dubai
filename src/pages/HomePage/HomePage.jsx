@@ -17,6 +17,7 @@ import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
 import VideoSlider from '@/components/view/VideoSlider/VideoSlider'
 import ServicesSection from '@/components/Services'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
+import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 
 
 
@@ -52,15 +53,15 @@ export default function HomePage() {
             {/* <FeaturedServices /> */}
 
             <FeaturedServices />
+            <WhoWeAre />
+            <MapComponent />
             {/* <VideoSlider /> */}
             {/* <PremiumServiceSlider />
             <GalleryCarousel />
             <ServicesSection />
             <TrustedService />
             <BlogPage />
-            <WhoWeAre />
             <GetTouch />
-            <MapComponent />
             <GMBReviews />
             <Reviews />
             <FAQSection />
