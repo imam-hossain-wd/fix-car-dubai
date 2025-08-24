@@ -10,27 +10,24 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/config/site";
-import Logo from "../Logo/Logo";
 import NavDrawer from "./NavDrawer";
-
-
-
-
-const {
-  email,
-  phoneNumber,
-  callNumber,
-  location,
-  socialLinks,
-  navItems
-} = SiteConfig;
-
+import Image from "next/image";
+import { bandlogo } from "@/utils/assets";
 
 
 
 
 export function Navbar() {
   const pathname = usePathname();
+
+  const {
+    email,
+    phoneNumber,
+    callNumber,
+    location,
+    socialLinks,
+    navItems
+  } = SiteConfig;
 
   return (
     <>
@@ -71,8 +68,8 @@ export function Navbar() {
 
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
           {/* Logo on left side for all screens */}
-          <div className="flex-1 md:flex-none">
-            <Logo />
+          <div className="flex-1 md:flex-none -ml-5">
+            <Image src={bandlogo.carfixdubailogo} width={180} height={180} quality={100} alt="car fix dubai logo" />
           </div>
 
           {/* Desktop Navigation */}
@@ -92,11 +89,8 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-
-
-
           {/* Mobile Menu Button */}
-        <NavDrawer />
+          <NavDrawer />
         </div>
       </header>
     </>

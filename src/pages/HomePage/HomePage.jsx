@@ -55,6 +55,7 @@ export default function HomePage() {
             <FeaturedServices />
             <WhoWeAre />
             <MapComponent />
+            <Reviews />
             {/* <VideoSlider /> */}
             {/* <PremiumServiceSlider />
             <GalleryCarousel />
@@ -63,7 +64,6 @@ export default function HomePage() {
             <BlogPage />
             <GetTouch />
             <GMBReviews />
-            <Reviews />
             <FAQSection />
             <ServiceAreas /> */}
         </div>
