@@ -3,8 +3,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import 'swiper/css';
 import 'swiper/css/navigation';
-// import galleryData from '../../data/gallery.json';
-// import VideoSlider from '@/components/view/VideoSlider/VideoSlider';
+
 import galleryData from '../../../data/gallery.json';
 
 export default function GalleryImage() {

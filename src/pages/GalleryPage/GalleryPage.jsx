@@ -4,7 +4,6 @@ import Head from 'next/head';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import galleryData from '../../data/gallery.json';
-import VideoSlider from '@/components/view/VideoSlider/VideoSlider';
 import GalleryImage from '@/components/view/Gallery/GalleryImage';
 
 export default function GalleryPage() {
@@ -22,7 +21,6 @@ export default function GalleryPage() {
         <meta name="description" content={galleryData.seo.description} />
       </Head>
       <GalleryImage />
-      <VideoSlider />
     </>
   );
 }

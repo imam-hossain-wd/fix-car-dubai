@@ -1,23 +1,18 @@
 
 
 import { FAQSection } from '@/components/view/FAQSection/FAQSection'
-// import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 import HomeBanner from '@/components/view/Home/HomeBanner/HomeBanner'
 import Reviews from '@/components/view/Reviews/Reviews'
-import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 import React from 'react'
 import BlogPage from '../BlogPage/BlogPage'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
-import { PremiumServiceSlider } from '@/components/view/Card/ServiceScenarios'
 import { getLocalBusinessSchema } from '@/schemas/localBusinessSchema'
 import { getOrganizationSchema } from '@/schemas/organizationSchema'
 import { SeoHead } from '@/seo/SeoHead'
 import Script from 'next/script'
-import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
-import VideoSlider from '@/components/view/VideoSlider/VideoSlider'
-import ServicesSection from '@/components/Services'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
+import GetTouch from '@/components/view/GetTouch/GetTouch'
 
 
 
@@ -56,16 +51,9 @@ export default function HomePage() {
             <WhoWeAre />
             <MapComponent />
             <Reviews />
-            {/* <VideoSlider /> */}
-            {/* <PremiumServiceSlider />
-            <GalleryCarousel />
-            <ServicesSection />
-            <TrustedService />
-            <BlogPage />
             <GetTouch />
-            <GMBReviews />
             <FAQSection />
-            <ServiceAreas /> */}
+            <BlogPage />
         </div>
     )
 }
