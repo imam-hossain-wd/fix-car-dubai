@@ -11,6 +11,7 @@ const {
   carAcRepair,
   acGasfill,
   CarbatterReplacement,
+  absSystemRepair
 } = serviceImages;
 
 
@@ -98,18 +99,6 @@ export const ServiceData = [
         "🔩 Varta"
       ],
       "note": "We only use 100% genuine batteries suitable for your vehicle make and model, with manufacturer warranty."
-    },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "We provide city-wide mobile battery replacement and roadside support across Dubai."
     },
     "ctaSection": {
       "heading": "Need Car Battery Replacement in Dubai Now?",
@@ -223,18 +212,6 @@ export const ServiceData = [
       ],
       "note": "We use only high-quality, vehicle-compatible AC components and tools to ensure long-lasting comfort."
     },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "We provide city-wide service and emergency AC support throughout Dubai."
-    },
     "ctaSection": {
       "heading": "Need Car AC Repair in Dubai Now?",
       "description": "Call now or book online for fast, professional car AC repair in Dubai. Enjoy a cool, comfortable drive again.",
@@ -264,130 +241,220 @@ export const ServiceData = [
     ]
   },
   {
-    "title": "Engine Oil & Gear Oil Change Dubai – Professional Car Lubrication Service",
-    "metaTitle": "Engine Oil & Gear Oil Change in Dubai | 24/7 Car Service",
-    "metaDescription": "Get expert engine oil and gear oil change services in Dubai. Fast, affordable, and available 24/7 with certified technicians. Book now!",
-    "features": [
-      "Engine oil change",
-      "High-quality oils",
-      "Engine maintenance",
-      "Performance optimization"
-    ],
-    "keywords": [
-      "engine oil change Dubai",
-      "gear oil change Dubai",
-      "car oil change service",
-      "Dubai oil change garage",
-      "affordable oil change Dubai"
-    ],
-    "slug": "engine-oil-gear-oil-change-dubai",
-    "service_image": engineOilChane,
-
-    // "service_image": "https://i.ibb.co/LPyv1Vd/engine-oil-changing.png",
-    "intro": {
-      "heading": "Reliable Engine & Gear Oil Change Service in Dubai",
-      "subheading": "Keep Your Car’s Heart Healthy with Timely Oil Replacement",
-      "content": "Changing your engine and gear oil is one of the most critical maintenance tasks to keep your car running smoothly on Dubai's hot roads. Our expert oil change service ensures your vehicle remains well-lubricated, reduces wear and tear, and performs at peak efficiency. Whether it's a routine change or part of a larger maintenance check, we use premium-grade oils tailored to your car’s specifications and offer quick, clean, and affordable oil changes across Dubai."
-    },
-    "whyChooseUs": {
-      "heading": "Why Choose Us for Engine & Gear Oil Change?",
-      "points": [
-        "✅ Premium synthetic and conventional oils used",
-        "✅ Certified and experienced car technicians",
-        "✅ Fast, mess-free service in 30 minutes or less",
-        "✅ Transparent pricing and no hidden charges",
-        "✅ Oil changes tailored to your car’s make and model",
-        "✅ 24/7 service across Dubai with mobile support"
-      ]
-    },
-    "problemSignsSection": {
-      "heading": "Common Signs You Need Engine or Gear Oil Change",
-      "description": "Ignoring oil changes can cause long-term damage to your engine or gearbox. Watch out for these warning signs:",
-      "signs": [
-        "🔧 Dark, dirty oil on dipstick",
-        "🔧 Engine noise or knocking sounds",
-        "🔧 Oil change light or check engine warning",
-        "🔧 Delayed or rough gear shifts",
-        "🔧 Burning smell from engine",
-        "🔧 Decreased fuel efficiency"
-      ]
-    },
-    "ourProcess": {
-      "heading": "How Our Oil Change Service Works",
-      "steps": [
-        {
-          "title": "1. Vehicle Assessment",
-          "description": "We inspect your car's oil level and condition and check manufacturer specifications."
-        },
-        {
-          "title": "2. Drain Old Oil",
-          "description": "We safely lift your vehicle and drain the used engine and/or gear oil."
-        },
-        {
-          "title": "3. Replace Oil Filter",
-          "description": "Old oil filters are removed and replaced with brand-new ones matching your vehicle."
-        },
-        {
-          "title": "4. Add New Oil",
-          "description": "High-quality engine or gear oil is added as per your car’s make and model."
-        },
-        {
-          "title": "5. Final Checks & Cleanup",
-          "description": "We inspect for leaks, verify oil levels, and recycle used oil responsibly."
-        }
-      ]
-    },
-    "toolsOrProducts": {
-      "heading": "Parts, Tools, or Brands We Use",
-      "brands": [
-        "🔩 Mobil 1™ Synthetic Oil",
-        "🔩 Castrol GTX",
-        "🔩 Bosch & Fram Oil Filters",
-        "🔩 Total Transmission Fluids",
-        "🔩 OEM-compatible oil filter wrenches"
-      ],
-      "note": "We use manufacturer-recommended oils and filters, ensuring optimal engine and gearbox performance."
-    },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "We provide city-wide service and emergency support throughout Dubai."
-    },
-    "ctaSection": {
-      "heading": "Need an Oil Change in Dubai Now?",
-      "description": "Call now or book online for fast, professional engine or gear oil change service in Dubai. Get back on the road with confidence.",
-      "buttonText": "Book Oil Change Service Now"
-    },
-    "faq": [
+  "title": "Car Engine Oil Change Dubai – Premium Oils & Expert Service",
+  "metaTitle": "Car Engine Oil Change in Dubai – Mobile & Workshop Service",
+  "metaDescription": "Professional car engine oil change in Dubai with premium synthetic oils, oil filter replacement, and expert mobile service. Keep your engine healthy and long-lasting.",
+  "features": [
+    "Premium synthetic and mineral oils",
+    "Oil filter replacement included",
+    "Quick 30-minute service",
+    "Eco-friendly old oil disposal",
+    "Suitable for all makes & models"
+  ],
+  "keywords": [
+    "car engine oil change Dubai",
+    "engine oil service Dubai",
+    "mobile oil change Dubai",
+    "oil filter replacement Dubai",
+    "car oil change near me"
+  ],
+  "slug": "car-engine-oil-change-dubai",
+  "service_image": engineOilChane,
+  "intro": {
+    "heading": "Professional Car Engine Oil Change Service in Dubai",
+    "subheading": "Keep Your Engine Clean, Cool, and Reliable",
+    "content": "Regular engine oil changes are essential to prevent engine wear and overheating. At 24CarServiceDubai, we provide fast, professional oil change services with high-quality synthetic and mineral oils, ensuring your vehicle runs smoothly in Dubai’s demanding climate."
+  },
+  "whyChooseUs": {
+    "heading": "Why Choose Us for Engine Oil Change?",
+    "points": [
+      "✅ Mobile oil change service available 24/7 across Dubai",
+      "✅ Expert mechanics with multi-brand experience",
+      "✅ Premium oils that meet manufacturer standards",
+      "✅ Oil filter replacement included in every service",
+      "✅ Affordable pricing with no hidden costs"
+    ]
+  },
+  "problemSignsSection": {
+    "heading": "Signs You Need an Oil Change",
+    "description": "Delaying your oil change can cause serious engine damage. Look out for these signs:",
+    "signs": [
+      "🔧 Dark, dirty, or low oil level",
+      "🔧 Increased engine noise or knocking",
+      "🔧 Oil change warning light on dashboard",
+      "🔧 Poor fuel efficiency",
+      "🔧 Exhaust smoke or burning oil smell"
+    ]
+  },
+  "ourProcess": {
+    "heading": "Our Oil Change Service Process",
+    "steps": [
       {
-        "question": "How often should I change my engine oil?",
-        "answer": "It depends on your vehicle and oil type. Typically, every 5,000 to 10,000 km is recommended. Check your owner's manual for specifics."
+        "title": "Step 1: Drain Old Oil",
+        "description": "We safely drain the used oil and inspect for leaks."
       },
       {
-        "question": "What oil type should I use?",
-        "answer": "We’ll help you choose the right grade based on your vehicle’s specifications and Dubai’s climate conditions."
+        "title": "Step 2: Replace Oil Filter",
+        "description": "A brand-new oil filter is installed for maximum engine protection."
       },
       {
-        "question": "Do you offer gear oil replacement too?",
-        "answer": "Yes, we offer gear oil replacement for both manual and automatic transmissions with manufacturer-approved products."
+        "title": "Step 3: Refill with Premium Oil",
+        "description": "High-quality synthetic or mineral oil is refilled according to your car manufacturer’s recommendations."
       },
       {
-        "question": "Can I book an oil change at home?",
-        "answer": "Yes! We offer mobile oil change services throughout Dubai for your convenience."
+        "title": "Step 4: Multi-Point Inspection",
+        "description": "We check fluid levels, belts, and engine condition to ensure everything runs perfectly."
       },
       {
-        "question": "Is oil filter replacement included?",
-        "answer": "Absolutely. We always replace your oil filter with every oil change to ensure optimal engine protection."
+        "title": "Step 5: Final Testing",
+        "description": "Engine performance is tested and service details are shared with you."
       }
     ]
   },
+  "toolsOrProducts": {
+    "heading": "Oils & Brands We Use",
+    "brands": [
+      "🔩 Castrol",
+      "🔩 Mobil 1",
+      "🔩 Shell Helix",
+      "🔩 Total Quartz",
+      "🔩 Valvoline"
+    ],
+    "note": "We only use 100% genuine engine oils recommended for your vehicle make and model."
+  },
+  "ctaSection": {
+    "heading": "Need an Engine Oil Change in Dubai?",
+    "description": "Book now for fast and professional car oil change service at your home, office, or our workshop. Keep your engine protected in Dubai’s heat.",
+    "buttonText": "Book Engine Oil Change Now"
+  },
+  "faq": [
+    {
+      "question": "How often should I change my car’s engine oil in Dubai?",
+      "answer": "Typically every 5,000–10,000 km or 6 months, but in Dubai’s heat, frequent oil changes may be required."
+    },
+    {
+      "question": "Do you replace the oil filter as well?",
+      "answer": "Yes, every oil change includes a new oil filter for maximum protection."
+    },
+    {
+      "question": "Do you offer mobile oil change service?",
+      "answer": "Yes, we provide doorstep oil change anywhere in Dubai, available 24/7."
+    },
+    {
+      "question": "Can I choose synthetic oil for my car?",
+      "answer": "Absolutely, we provide both synthetic and mineral oils based on your vehicle’s requirements."
+    },
+    {
+      "question": "How long does the oil change take?",
+      "answer": "The service usually takes 20–30 minutes depending on your vehicle type."
+    }
+  ]
+}
+,
+
+{
+  "title": "Car Gear Oil Change Dubai – Smooth Gear Shifts & Transmission Care",
+  "metaTitle": "Car Gear Oil Change in Dubai – Transmission Oil Replacement Service",
+  "metaDescription": "Expert car gear oil change service in Dubai for manual and automatic cars. Improve gear shifting, reduce wear, and extend transmission life.",
+  "features": [
+    "OEM-recommended gear oils",
+    "Old oil drain and refill",
+    "Transmission leak check",
+    "Eco-friendly oil disposal"
+  ],
+  "keywords": [
+    "car gear oil change Dubai",
+    "transmission oil change Dubai",
+    "gearbox oil replacement Dubai",
+    "automatic transmission oil change",
+    "manual gear oil service Dubai"
+  ],
+  "slug": "car-gear-oil-change-dubai",
+  "service_image": gareOilChange,
+  "intro": {
+    "heading": "Reliable Car Gear Oil Change Service in Dubai",
+    "subheading": "Ensure Smooth and Long-Lasting Gear Performance",
+    "content": "Gear oil lubricates your transmission system, reducing friction and wear. At 24CarServiceDubai, we provide professional gear oil change services for both manual and automatic vehicles, helping prevent overheating and extending gearbox life."
+  },
+  "whyChooseUs": {
+    "heading": "Why Choose Us for Gear Oil Change?",
+    "points": [
+      "✅ Mobile and workshop service available 24/7",
+      "✅ Skilled technicians specialized in transmission care",
+      "✅ OEM-approved gear oils used",
+      "✅ Quick service with competitive pricing",
+      "✅ Free transmission health check included"
+    ]
+  },
+  "problemSignsSection": {
+    "heading": "Signs You Need a Gear Oil Change",
+    "description": "Ignoring gear oil replacement can cause costly gearbox repairs. Look for these warning signs:",
+    "signs": [
+      "🔧 Difficulty or delay in shifting gears",
+      "🔧 Noisy or grinding gear changes",
+      "🔧 Transmission overheating",
+      "🔧 Leaking or dirty gear oil",
+      "🔧 Burning smell from gearbox"
+    ]
+  },
+  "ourProcess": {
+    "heading": "Our Gear Oil Change Process",
+    "steps": [
+      {
+        "title": "Step 1: Drain Old Gear Oil",
+        "description": "We remove old oil and inspect for leaks or damage."
+      },
+      {
+        "title": "Step 2: Refill with Fresh Gear Oil",
+        "description": "Manufacturer-recommended oil is added to ensure smooth shifting."
+      },
+      {
+        "title": "Step 3: Transmission Check",
+        "description": "We perform a detailed inspection of gearbox condition and seals."
+      },
+      {
+        "title": "Step 4: Test Drive",
+        "description": "A quick test ensures your gears shift smoothly without noise."
+      }
+    ]
+  },
+  "toolsOrProducts": {
+    "heading": "Gear Oils & Brands We Use",
+    "brands": [
+      "🔩 Mobil ATF",
+      "🔩 Castrol Transmax",
+      "🔩 Toyota Genuine ATF",
+      "🔩 Valvoline ATF",
+      "🔩 Liqui Moly"
+    ],
+    "note": "We use OEM-specified gear oils for both manual and automatic transmissions."
+  },
+  "ctaSection": {
+    "heading": "Book Your Gear Oil Change in Dubai Today",
+    "description": "Ensure smooth gear shifting and extended transmission life with our expert gear oil change service. Available at your doorstep or in our workshop.",
+    "buttonText": "Book Gear Oil Change Now"
+  },
+  "faq": [
+    {
+      "question": "How often should gear oil be changed?",
+      "answer": "Every 40,000–60,000 km for most vehicles, but check your car’s manual for exact intervals."
+    },
+    {
+      "question": "Do you service both automatic and manual transmissions?",
+      "answer": "Yes, we provide gear oil change for all transmission types."
+    },
+    {
+      "question": "Can you do gear oil change at my location?",
+      "answer": "Yes, we offer mobile gear oil change services anywhere in Dubai."
+    },
+    {
+      "question": "What happens if I delay gear oil change?",
+      "answer": "It can cause gear slipping, overheating, and costly transmission damage."
+    }
+  ]
+}
+
+,
   {
     "title": "Car Brake Pad Repair and Replacement in Dubai – Affordable & Professional Service",
     "metaTitle": "Car Brake Pad Repair and Replacement Dubai | Expert Brake Services",
@@ -471,18 +538,6 @@ export const ServiceData = [
         "🔩 OEM Caliper Kits"
       ],
       "note": "We only use manufacturer-approved brake pads and tools compatible with all major car brands including Toyota, Nissan, BMW, Mercedes-Benz, and more."
-    },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "We provide city-wide service and emergency support throughout Dubai."
     },
     "ctaSection": {
       "heading": "Need Car Brake Pad Repair in Dubai Now?",
@@ -596,18 +651,6 @@ export const ServiceData = [
       ],
       "note": "We handle all radiator types including aluminum cores with plastic tanks and copper-brass radiators."
     },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "Our mobile service covers all major neighborhoods throughout Dubai."
-    },
     "ctaSection": {
       "heading": "Need Car Radiator Repair or Replacement in Dubai?",
       "description": "Contact us today for expert radiator services. Avoid costly engine damage and keep your car cool and safe on the road.",
@@ -655,8 +698,7 @@ export const ServiceData = [
       "ABS repair near me"
     ],
     "slug": "abs-system-repair-dubai",
-    "service_image":  carBreakPad,
-    // "service_image": "https://i.ibb.co/TBHhWYK/Screenshot-2023-09-21-at-20-43-27-Premium-Photo-Brake-disk.png",
+    "service_image":  absSystemRepair,
     "intro": {
       "heading": "Ensure Your Safety with Expert ABS System Repair",
       "subheading": "Keep Your Vehicle’s Braking System in Perfect Condition",
@@ -721,18 +763,7 @@ export const ServiceData = [
       ],
       "note": "We ensure compatibility with all major car brands and maintain the highest repair quality standards."
     },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "We provide city-wide ABS repair and emergency support across Dubai."
-    },
+
     "ctaSection": {
       "heading": "Need ABS System Repair in Dubai Now?",
       "description": "Call us or book online for fast, reliable ABS repair. Drive safer with 24 Car Service Dubai’s expert technicians.",
@@ -761,8 +792,120 @@ export const ServiceData = [
       }
     ]
   },
+ {
+  "title": "Car Maintenance Dubai – Complete Service for All Makes & Models",
+  "metaTitle": "Car Maintenance in Dubai – Full Car Service Packages",
+  "metaDescription": "Professional car maintenance service in Dubai including oil change, brakes, AC, battery replacement, and diagnostics. Affordable packages for all car brands.",
+  "features": [
+    "Full car inspection",
+    "Engine oil & filter change",
+    "Brake, AC & battery check",
+    "Fluid top-ups",
+    "Computer diagnostics"
+  ],
+  "keywords": [
+    "car maintenance Dubai",
+    "car service Dubai",
+    "car repair and maintenance Dubai",
+    "car workshop Dubai",
+    "full car service Dubai"
+  ],
+  "slug": "car-maintenance-dubai",
+  "service_image": carMaintenance,
+  "intro": {
+    "heading": "Comprehensive Car Maintenance Service in Dubai",
+    "subheading": "Keep Your Vehicle in Peak Condition",
+    "content": "Regular car maintenance is vital to ensure your safety, performance, and reliability. At 24CarServiceDubai, we offer complete maintenance solutions including oil changes, brakes, AC repair, battery testing, and full system inspections for all makes and models."
+  },
+  "whyChooseUs": {
+    "heading": "Why Choose Us for Car Maintenance?",
+    "points": [
+      "✅ 24/7 availability – mobile or workshop service",
+      "✅ Experienced multi-brand specialists",
+      "✅ Use of genuine parts and premium oils",
+      "✅ Affordable and transparent pricing",
+      "✅ Tailored maintenance packages"
+    ]
+  },
+  "problemSignsSection": {
+    "heading": "Signs Your Car Needs Maintenance",
+    "description": "Ignoring regular service can lead to costly repairs. Watch for these signs:",
+    "signs": [
+      "🔧 Warning lights on dashboard",
+      "🔧 Reduced fuel efficiency",
+      "🔧 Unusual engine noises",
+      "🔧 Squeaking brakes or vibrations",
+      "🔧 Weak AC cooling",
+      "🔧 Delayed starting or battery issues"
+    ]
+  },
+  "ourProcess": {
+    "heading": "Our Car Maintenance Process",
+    "steps": [
+      {
+        "title": "Step 1: Vehicle Inspection",
+        "description": "We check all vital systems, including engine, brakes, AC, and battery."
+      },
+      {
+        "title": "Step 2: Oil & Filter Change",
+        "description": "We replace engine oil and filter with manufacturer-recommended products."
+      },
+      {
+        "title": "Step 3: Brake & Fluid Check",
+        "description": "Brake pads, fluid levels, and cooling system are inspected and topped up."
+      },
+      {
+        "title": "Step 4: Diagnostics & Testing",
+        "description": "Computerized diagnostics ensure no hidden issues remain."
+      },
+      {
+        "title": "Step 5: Final Handover",
+        "description": "We provide a detailed report and recommend future maintenance schedules."
+      }
+    ]
+  },
+  "toolsOrProducts": {
+    "heading": "Parts & Brands We Use",
+    "brands": [
+      "🔩 Castrol Oils",
+      "🔩 Bosch Filters",
+      "🔩 AC Delco Batteries",
+      "🔩 OEM Brake Pads",
+      "🔩 NGK Spark Plugs"
+    ],
+    "note": "We use 100% genuine parts and products for all vehicle brands, ensuring reliability and safety."
+  },
+  "ctaSection": {
+    "heading": "Book Professional Car Maintenance in Dubai",
+    "description": "Ensure your vehicle’s reliability and performance with our expert maintenance services. Flexible packages available for all car brands.",
+    "buttonText": "Book Car Maintenance Now"
+  },
+  "faq": [
+    {
+      "question": "How often should I service my car in Dubai?",
+      "answer": "Every 10,000 km or 6 months is recommended, but Dubai’s extreme weather may require more frequent service."
+    },
+    {
+      "question": "Do you offer mobile car maintenance?",
+      "answer": "Yes, we provide on-site basic maintenance and full workshop services."
+    },
+    {
+      "question": "Which car brands do you service?",
+      "answer": "We service all major brands including Toyota, Nissan, BMW, Mercedes, Audi, Ford, and more."
+    },
+    {
+      "question": "Can I book a customized maintenance package?",
+      "answer": "Yes, we offer tailored packages based on your vehicle’s mileage and condition."
+    },
+    {
+      "question": "Do you use genuine parts?",
+      "answer": "Absolutely, we only use genuine or OEM-approved parts for safety and reliability."
+    }
+  ]
+}
+,
   {
-    "title": "DenamoCraft Tailored Car Transformation – Custom Car Modification Dubai",
+    "title": "Car Detailing Dubai",
     "metaTitle": "DenamoCraft Custom Car Transformation Services in Dubai | Personalized Car Mods",
     "metaDescription": "Transform your vehicle with DenamoCraft’s tailored car transformation services in Dubai. Expert custom modifications, styling, and performance upgrades.",
     "features": [
@@ -779,8 +922,7 @@ export const ServiceData = [
       "DenamoCraft car mods"
     ],
     "slug": "denamocraft-tailored-car-transformation-dubai",
-    "service_image": "https://i.ibb.co/LPyv1Vd/engine-oil-changing.png",
-    // "service_image": "https://i.ibb.co/LPyv1Vd/engine-oil-changing.png",
+    "service_image":carDetailing,
     "intro": {
       "heading": "Unleash Your Vehicle’s Potential with DenamoCraft Tailored Car Transformation",
       "subheading": "Custom Car Mods Crafted to Your Unique Style and Performance Needs",
@@ -844,18 +986,6 @@ export const ServiceData = [
         "🔩 Sparco interior customization accessories"
       ],
       "note": "We source high-quality parts ensuring durability, performance, and style that matches your unique preferences."
-    },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "DenamoCraft offers city-wide custom car transformation services with flexible scheduling and on-demand consultations."
     },
     "ctaSection": {
       "heading": "Ready for Your Tailored Car Transformation in Dubai?",
@@ -885,127 +1015,117 @@ export const ServiceData = [
       }
     ]
   },
+
   {
-    "title": "Car Detailing Dubai",
-    "metaTitle": "DenamoCraft Custom Car Transformation Services in Dubai | Personalized Car Mods",
-    "metaDescription": "Transform your vehicle with DenamoCraft’s tailored car transformation services in Dubai. Expert custom modifications, styling, and performance upgrades.",
-    "features": [
-      "Custom modifications",
-      "Personalization",
-      "Unique feature installations",
-      "Aesthetic enhancements"
-    ],
-    "keywords": [
-      "car transformation Dubai",
-      "custom car modification",
-      "tailored car upgrades",
-      "car customization Dubai",
-      "DenamoCraft car mods"
-    ],
-    "slug": "denamocraft-tailored-car-transformation-dubai",
-    "service_image": "https://res.cloudinary.com/dthqxsg18/image/upload/v1753548020/Car_Detailing_sslrry.jpg",
-    "intro": {
-      "heading": "Unleash Your Vehicle’s Potential with DenamoCraft Tailored Car Transformation",
-      "subheading": "Custom Car Mods Crafted to Your Unique Style and Performance Needs",
-      "content": "At DenamoCraft, we specialize in transforming ordinary vehicles into personalized masterpieces. Whether you want enhanced aesthetics, improved performance, or both, our tailored car transformation service in Dubai delivers bespoke modifications designed to match your vision. From custom body kits to engine tuning, we bring innovation and craftsmanship together to make your car truly one-of-a-kind."
-    },
-    "whyChooseUs": {
-      "heading": "Why Choose DenamoCraft for Your Car Transformation?",
-      "points": [
-        "✅ Personalized modifications tailored to your preferences",
-        "✅ Skilled technicians with extensive customization experience",
-        "✅ Use of premium quality parts and materials",
-        "✅ Cutting-edge design and engineering solutions",
-        "✅ Transparent pricing with no hidden costs",
-        "✅ Reliable service with timely project delivery"
-      ]
-    },
-    "problemSignsSection": {
-      "heading": "When You Should Consider a Tailored Car Transformation",
-      "description": "Recognize the signs that your vehicle needs a customized upgrade to enhance its look, feel, or performance:",
-      "signs": [
-        "🔧 Desire for unique vehicle styling that stands out",
-        "🔧 Dissatisfaction with factory performance or handling",
-        "🔧 Need for upgraded interior comfort and tech",
-        "🔧 Wear or damage to original body parts needing replacement",
-        "🔧 Preparing your car for special events or shows",
-        "🔧 Wanting enhanced fuel efficiency or power with tuning"
-      ]
-    },
-    "ourProcess": {
-      "heading": "How Our Tailored Car Transformation Works",
-      "steps": [
-        {
-          "title": "Step 1: Consultation & Design",
-          "description": "We collaborate to understand your vision and create a detailed modification plan."
-        },
-        {
-          "title": "Step 2: Component Selection",
-          "description": "Choose from premium parts and materials customized to your vehicle."
-        },
-        {
-          "title": "Step 3: Custom Fabrication & Installation",
-          "description": "Our skilled technicians perform precision work to bring your design to life."
-        },
-        {
-          "title": "Step 4: Performance Tuning & Testing",
-          "description": "Enhance vehicle performance with expert tuning and rigorous quality checks."
-        },
-        {
-          "title": "Step 5: Final Review & Delivery",
-          "description": "We ensure everything meets your expectations before handing over your transformed car."
-        }
-      ]
-    },
-    "toolsOrProducts": {
-      "heading": "Premium Parts, Tools, and Brands We Use",
-      "brands": [
-        "🔩 HKS performance tuning kits",
-        "🔩 KW Suspension systems",
-        "🔩 Brembo braking components",
-        "🔩 3M automotive wraps and paints",
-        "🔩 Sparco interior customization accessories"
-      ],
-      "note": "We source high-quality parts ensuring durability, performance, and style that matches your unique preferences."
-    },
-    "serviceCoverage": {
-      "heading": "Areas We Serve in Dubai",
-      "locations": [
-        "📍 Al Satwa",
-        "📍 Downtown Dubai",
-        "📍 Jumeirah",
-        "📍 Business Bay",
-        "📍 Al Quoz",
-        "📍 Dubai Marina"
-      ],
-      "note": "DenamoCraft offers city-wide custom car transformation services with flexible scheduling and on-demand consultations."
-    },
-    "ctaSection": {
-      "heading": "Ready for Your Tailored Car Transformation in Dubai?",
-      "description": "Contact us today to schedule your consultation and start creating the car you’ve always dreamed of.",
-      "buttonText": "Book Your Custom Car Transformation"
-    },
-    "faq": [
+  "title": "Car AC Gas Refill Dubai – Stay Cool with Professional Service",
+  "metaTitle": "Car AC Gas Filling in Dubai – Fast & Reliable AC Recharge",
+  "metaDescription": "Expert car AC gas refill service in Dubai. Restore cooling performance with professional AC recharge, leak checks, and same-day service.",
+  "features": [
+    "Complete AC system inspection",
+    "AC gas leak detection and repair",
+    "Professional AC gas refill",
+    "Compressor & condenser check",
+    "Quick same-day service"
+  ],
+  "keywords": [
+    "car ac gas refill Dubai",
+    "car ac recharge Dubai",
+    "car ac gas filling near me",
+    "car ac repair Dubai",
+    "car ac service Dubai"
+  ],
+  "slug": "car-ac-gas-fill-dubai",
+  "service_image": acGasfill,
+  "intro": {
+    "heading": "Professional Car AC Gas Refill Service in Dubai",
+    "subheading": "Beat the Heat with a Fully Functional Car AC",
+    "content": "Dubai’s hot weather makes a fully functional car AC essential. At 24CarServiceDubai, we provide expert AC gas refill services to restore cooling efficiency. Our certified technicians perform leak tests, refill refrigerant gas, and check your AC system for long-lasting performance."
+  },
+  "whyChooseUs": {
+    "heading": "Why Choose Us for Car AC Gas Refill?",
+    "points": [
+      "✅ Fast AC gas refill and recharge service",
+      "✅ Leak detection and repair included",
+      "✅ Certified technicians for all car brands",
+      "✅ Mobile and workshop service available",
+      "✅ Affordable pricing with transparent quotes"
+    ]
+  },
+  "problemSignsSection": {
+    "heading": "Signs Your Car Needs an AC Gas Refill",
+    "description": "If your car AC isn’t cooling like before, it may be time for an AC recharge. Look out for these common signs:",
+    "signs": [
+      "🔧 Weak or warm airflow from vents",
+      "🔧 AC takes longer to cool",
+      "🔧 Unusual noises when AC is on",
+      "🔧 Bad odor from AC vents",
+      "🔧 Water leakage inside cabin",
+      "🔧 Frequent compressor cycling"
+    ]
+  },
+  "ourProcess": {
+    "heading": "Our Car AC Gas Refill Process",
+    "steps": [
       {
-        "question": "How long does a tailored car transformation take?",
-        "answer": "The timeline varies depending on the scope of modifications, typically ranging from a few days to several weeks. We provide a detailed estimate after consultation."
+        "title": "Step 1: AC System Inspection",
+        "description": "We inspect the compressor, condenser, and cooling coils for faults."
       },
       {
-        "question": "Can you customize any car model?",
-        "answer": "Yes, our experts can work on most car models and makes, tailoring modifications to fit your specific vehicle."
+        "title": "Step 2: Leak Detection",
+        "description": "Advanced tools are used to check for refrigerant leaks."
       },
       {
-        "question": "Are your modifications safe and legal?",
-        "answer": "All our modifications comply with Dubai’s vehicle safety and road regulations, ensuring your car remains safe and roadworthy."
+        "title": "Step 3: Old Gas Removal",
+        "description": "We safely evacuate old refrigerant and moisture from the system."
       },
       {
-        "question": "Do you offer warranty on custom parts?",
-        "answer": "We provide warranty coverage on all parts and workmanship used in our car transformations. Specific details depend on the components installed."
+        "title": "Step 4: AC Gas Refill",
+        "description": "The correct refrigerant (R134a or R1234yf) is refilled based on your vehicle’s specifications."
       },
       {
-        "question": "Can I choose only performance or only aesthetic upgrades?",
-        "answer": "Absolutely! We tailor services to your needs, whether you want performance tuning, aesthetic upgrades, or a full transformation."
+        "title": "Step 5: Performance Test",
+        "description": "We check cooling efficiency, airflow, and ensure your AC works like new."
       }
     ]
-  }
+  },
+  "toolsOrProducts": {
+    "heading": "Refrigerants & Tools We Use",
+    "brands": [
+      "🔩 R134a Refrigerant",
+      "🔩 R1234yf Refrigerant",
+      "🔩 AC Leak Detector Tools",
+      "🔩 AC Recovery Machines",
+      "🔩 OEM AC Oils"
+    ],
+    "note": "We use only genuine and eco-friendly refrigerants that comply with manufacturer and environmental standards."
+  },
+  "ctaSection": {
+    "heading": "Need a Car AC Gas Refill in Dubai?",
+    "description": "Book your AC gas refill today and enjoy cool, fresh air on every drive. Available 24/7 across Dubai at your home, office, or roadside.",
+    "buttonText": "Book Car AC Gas Refill Now"
+  },
+  "faq": [
+    {
+      "question": "How often should I refill my car’s AC gas?",
+      "answer": "Most cars need AC gas refill every 1–2 years, but frequent use in Dubai’s heat may require earlier service."
+    },
+    {
+      "question": "What type of AC gas do you use?",
+      "answer": "We use R134a or R1234yf refrigerants depending on your vehicle’s manufacturer specifications."
+    },
+    {
+      "question": "Can you check for AC leaks?",
+      "answer": "Yes, we perform a full leak test before refilling to ensure long-lasting cooling performance."
+    },
+    {
+      "question": "Do you offer mobile AC gas refill service?",
+      "answer": "Yes, our technicians can come to your location anywhere in Dubai for AC gas refill."
+    },
+    {
+      "question": "How long does AC gas refill take?",
+      "answer": "The process usually takes 30–45 minutes depending on your vehicle’s AC system condition."
+    }
+  ]
+}
+
 ]

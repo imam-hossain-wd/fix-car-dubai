@@ -18,6 +18,7 @@ import engineOilChane from '../assets/services/car-engine-oil-change-service-al-
 import gareOilChange from '../assets/services/car-gear-oil-change-service-al-karama-dubai-uae.jpg';
 import carMaintenance from '../assets/services/car-maintenance-service-al-karama-dubai-uae.jpg';
 import carRaditor from '../assets/services/car-radiator-repair-service-al-karama-dubai-uae.jpg';
+import absSystemRepair from '../assets/services/abs-system-repair-service-al-karama-dubai-uae.jpg';
 
 
 export const images = {
@@ -38,6 +39,7 @@ carBreakPad,
 carAcRepair,
 acGasfill,
 CarbatterReplacement,
+absSystemRepair
 }
 
 export const homeicons = {

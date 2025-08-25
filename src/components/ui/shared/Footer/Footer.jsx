@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Car, Clock, Shield, Award, Sparkles, Send, Wrench } from "lucide-react";
+import {  MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 
 export function Footer() {
@@ -128,21 +128,6 @@ export function Footer() {
               ))}
             </div>
             
-            {/* Quick Contact Form */}
-            <div className="mt-4 p-4 bg-white/5 rounded-xl border border-white/5">
-              <p className="text-sm font-medium text-white mb-2">Quick Inquiry</p>
-              <div className="space-y-2">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#F4A723]"
-                />
-                <button className="w-full bg-[#F4A723] text-gray-900 px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#E5971C] transition-colors flex items-center justify-center gap-2">
-                  <Send className="h-4 w-4" />
-                  Request Callback
-                </button>
-              </div>
-            </div>
           </div>
 
           {/* Company & Social Column */}

@@ -15,6 +15,7 @@ import {
 import * as React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
+import { SiteConfig } from '@/config/site'
 
 function ServiceDetailsPage({ service }) {
   const getServiceIcon = React.useCallback(() => {
@@ -201,8 +202,8 @@ function ServiceDetailsPage({ service }) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {service?.serviceCoverage?.locations?.map((location, index) => (
-                      <div key={index} className="flex items-center gap-3">
+                    {SiteConfig.serviceAreas?.map((location, index) => (
+                      <div key={index} className="flex flex-2 items-center gap-3">
                         <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
                         <span className="text-sm">
                           {location.replace('📍', '').trim()}

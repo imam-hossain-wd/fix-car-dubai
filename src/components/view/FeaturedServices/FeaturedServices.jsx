@@ -27,17 +27,16 @@ export default function FeaturedServices() {
           </p>
         </div>
         <div className="w-full mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {ServiceData.map((service, index) => (
+          {ServiceData.slice(0,8).map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
         </div>
 
         {/* CTA section */}
-        <div className="text-center mt-16 pt-8 border-t border-gray-200">
-          <p className="text-gray-600 mb-6">Need a service not listed here?</p>
+        <div className="text-center mt-8">
           <Button size="lg" className="rounded-full gap-2" asChild>
-            <Link href="/contact">
-              Contact Us
+            <Link href="/services">
+              View All Services
               <ArrowRight className="h-5 w-5" />
             </Link>
           </Button>
