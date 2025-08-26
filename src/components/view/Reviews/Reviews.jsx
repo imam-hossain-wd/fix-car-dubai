@@ -436,11 +436,11 @@ export default function Reviews() {
                     
                     {/* Action Button */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <span className="inline-flex items-center gap-2 text-xs bg-green-50 text-green-600 px-3 py-1.5 rounded-full">
+                      <span className="inline-flex items-center gap-2 text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full">
                         <Check className="w-3 h-3" />
                         Verified Customer
                       </span>
-                      <button className="text-primary hover:text-green-600 text-sm font-medium flex items-center gap-1 transition-colors group-hover:gap-2">
+                      <button className="text-primary hover:text-primary/90 text-sm font-medium flex items-center gap-1 transition-colors group-hover:gap-2">
                         Read more
                         <ChevronRight className="w-4 h-4" />
                       </button>

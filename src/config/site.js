@@ -28,32 +28,44 @@ export const SiteConfig = {
   country: "UAE",
   services: [
     {
-      title: "Car Battery Replacement Dubai",
-      href: "/services/car-battery-replacement-dubai"
+      name: "Car Battery Replacement",
+      slug: "car-battery-replacement-dubai"
     },
     {
-      title: "Car Brake Pad Repair Dubai",
-      href: "/services/car-brake-pad-repair-dubai"
+      name: "Car AC Repair",
+      slug: "car-ac-repair-dubai"
     },
     {
-      title: "Engine Oil Change Dubai",
-      href: "/services/engine-oil-change-dubai"
+      name: "Car Engine Oil Change",
+      slug: "car-engine-oil-change-dubai"
     },
     {
-      title: "Air Conditioner Repair Dubai",
-      href: "/services/air-conditioner-repair-dubai"
+      name: "Car Gear Oil Change",
+      slug: "car-gear-oil-change-dubai"
     },
     {
-      title: "Car Radiator Service Dubai",
-      href: "/services/car-radiator-service-dubai"
+      name: "Car Brake Pad Repair",
+      slug: "car-brake-pad-repair-and-replacement-dubai"
     },
     {
-      title: "Gearbox Repair & Service Dubai",
-      href: "/services/gearbox-repair-service-dubai"
+      name: "Car Radiator Repair",
+      slug: "car-radiator-repair-and-replacement-dubai"
     },
     {
-      title: "Car Maintenance Dubai",
-      href: "/services/car-maintenance-dubai"
+      name: "ABS System Repair",
+      slug: "abs-system-repair-dubai"
+    },
+    {
+      name: "Car Maintenance",
+      slug: "car-maintenance-dubai"
+    },
+    {
+      name: "Car Detailing",
+      slug: "denamocraft-tailored-car-transformation-dubai"
+    },
+    {
+      name: "Car AC Gas Refill",
+      slug: "car-ac-gas-fill-dubai"
     }
   ],
 

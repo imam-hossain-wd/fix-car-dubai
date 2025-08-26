@@ -16,7 +16,7 @@ export default function AboutPage() {
       </Head>
 
       {/* Hero Section */}
-{/* <section className="relative h-[320px]  w-full bg-gradient-to-br from-emerald-500 to-teal-600 overflow-hidden"> */}
+
 <section className="relative h-[320px]  w-full bg-gradient-to-br from-emerald-500 to-teal-600 overflow-hidden">
   {/* Background elements */}
   <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMCAyLjIwOS0xLjc5MSA0LTQgNHMtNC0xLjc5MS00LTRzMS43OTEtNCA0LTRzNCAxLjc5MSA0IDR6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>

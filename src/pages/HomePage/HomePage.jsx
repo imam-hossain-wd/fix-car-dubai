@@ -14,6 +14,7 @@ import FeaturedServices from '@/components/view/FeaturedServices/FeaturedService
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import BookAppointmentForm from '@/components/Forms/AppointmentForm'
+import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 
 
 
@@ -50,6 +51,7 @@ export default function HomePage() {
 
             <FeaturedServices />
             <WhoWeAre />
+            <TrustedService />
             <MapComponent />
             <Reviews />
             <GetTouch />

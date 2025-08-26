@@ -1,10 +1,11 @@
 
+import { ServiceData } from '@/data/services'
 import ServiceDetailsPage from '@/pages/ServicePage/ServiceDetailsPage'
-import servicesData from '../../../data/services.json'
+
 
 
 export default async function ServiceDetailPage({ params }) {
-  const service = servicesData.services.find(
+  const service = ServiceData.find(
     (s) => s.slug === params.slug
   ) 
 

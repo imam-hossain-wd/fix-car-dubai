@@ -1,6 +1,8 @@
 import Link from "next/link";
 import {  MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
 import { SiteConfig } from "@/config/site";
+import Image from "next/image";
+import { bandlogo } from "@/utils/assets";
 
 export function Footer() {
   const {
@@ -29,16 +31,12 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#F4A723] rounded-xl">
-                <Car className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">
-                {brandName}
-              </h2>
-            </div>
+            <Link href="/" className="flex items-center -my-14 -ml-10 ">
+            <Image className="w-40 h-40" src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="car fix dubai logo" />
+            <h3 className="text-3xl text-primary font-bold -ml-10">Fix Car Dubai</h3>
+          </Link>
             
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <p className="text-sm font-medium text-gray-300 leading-relaxed mt-5 ">
               Dubai's premier mobile car repair service, delivering expert solutions 24/7 at your doorstep.
             </p>
 
@@ -67,7 +65,7 @@ export function Footer() {
                   >
                     {phoneNumber}
                   </Link>
-                  <p className="text-xs text-gray-400 mt-1">24/7 Emergency Support</p>
+                  <p className="text-xs font-medium text-white mt-1">24/7 Emergency Support</p>
                 </div>
               </div>
 
@@ -100,11 +98,11 @@ export function Footer() {
               {services.map((service, index) => (
                 <Link
                   key={index}
-                  href={service.href}
+                  href={service.slug}
                   className="text-sm text-gray-300 hover:text-[#F4A723] transition-all p-1 rounded-lg hover:bg-[#F4A723]/10 flex items-center gap-3 group border border-transparent hover:border-[#F4A723]/20"
                 >
                   <div className="w-2 h-2 rounded-full bg-[#F4A723] group-hover:scale-125 transition-transform"></div>
-                  {service.title}
+                  {service.name}
                 </Link>
               ))}
             </nav>

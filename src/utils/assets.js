@@ -1,4 +1,5 @@
 import whoweare from '../assets/images/Who we are.jpg';
+import aboutus from '../assets/automotive-service-car-maintenance-repair-garage-workshop-auto-solution-dubai.jpg';
 import appointment from '../assets/homeicons/appointment.png';
 import company from '../assets/homeicons/company.png';
 import house from '../assets/homeicons/house.png';
@@ -22,7 +23,8 @@ import absSystemRepair from '../assets/services/abs-system-repair-service-al-kar
 
 
 export const images = {
-    whoweare
+    whoweare,
+    aboutus
 }
 
 export const bandlogo= {
