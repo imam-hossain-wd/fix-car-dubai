@@ -7,13 +7,14 @@ import {
   Phone,
   Mail,
   MapPin,
+  Calendar,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/config/site";
 import NavDrawer from "./NavDrawer";
 import Image from "next/image";
 import { bandlogo } from "@/utils/assets";
-
+import { Button } from "@/components/ui/button"
 
 
 
@@ -61,6 +62,8 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
+
+            
           </div>
         </div>
 
@@ -68,9 +71,9 @@ export function Navbar() {
 
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
           {/* Logo on left side for all screens */}
-          <div className="flex-1 md:flex-none -ml-5">
-            <Image src={bandlogo.carfixdubailogo} width={180} height={180} quality={100} alt="car fix dubai logo" />
-          </div>
+          <Link href="/" className="flex-1 md:flex-none -ml-8 md:-ml-0">
+            <Image src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="car fix dubai logo" />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-8 md:flex mx-auto">
@@ -89,6 +92,11 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
+         <Link href="/book-appointment">
+          <Button className="text-xs -py-3">
+             <Calendar className="h-4 w-4 text-white group-hover/action:text-white" />
+              Book Now
+            </Button></Link>
           {/* Mobile Menu Button */}
           <NavDrawer />
         </div>

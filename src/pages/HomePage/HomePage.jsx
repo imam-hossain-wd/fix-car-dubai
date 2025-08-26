@@ -13,6 +13,7 @@ import Script from 'next/script'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
+import BookAppointmentForm from '@/components/Forms/AppointmentForm'
 
 
 
@@ -53,6 +54,8 @@ export default function HomePage() {
             <Reviews />
             <GetTouch />
             <FAQSection />
+            <BookAppointmentForm />
+
             <BlogPage />
         </div>
     )
