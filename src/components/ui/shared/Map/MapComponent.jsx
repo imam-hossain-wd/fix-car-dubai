@@ -104,12 +104,12 @@ const MapComponent = () => {
     phoneNumber,
     phoneAction,
     location,
-    cordinate,
+    coordinate,
     whatsappCall,
   } = SiteConfig;
 
   const [isMapLoaded, setIsMapLoaded] = useState(false);
-  const mapUrl = `https://maps.google.com/maps?q=${cordinate}&z=15&output=embed`;
+  const mapUrl = `https://maps.google.com/maps?q=${coordinate}&z=15&output=embed`;
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
@@ -250,7 +250,7 @@ const MapComponent = () => {
             )}
             
             <iframe
-              title="24 Car Repair Dubai Location"
+              title="Car Repair & Battery Replacement Dubai"
               src={mapUrl}
               width="100%"
               height="100%"

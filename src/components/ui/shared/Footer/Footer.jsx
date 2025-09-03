@@ -2,7 +2,7 @@ import Link from "next/link";
 import {  MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 import Image from "next/image";
-import { bandlogo } from "@/utils/assets";
+import { bandlogo, serviceImages } from "@/utils/assets";
 
 export function Footer() {
   const {
@@ -15,6 +15,8 @@ export function Footer() {
     email,
     city
   } = SiteConfig;
+
+  
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">

@@ -11,7 +11,7 @@ export const SiteConfig = {
   callNumber: "+971568703512",
   whatsappNumber: "+971568703512",
   location: "Al Karama, Dubai - UAE",
-  coordinate: "25.2485396,55.2875283",
+  coordinate: "25.2485261,55.3034075",
   serviceAreas: [
     "Al Karama",
     "Oud Metha",
@@ -23,6 +23,15 @@ export const SiteConfig = {
     "Al Mina",
     "Al Hudaiba",
     "Al Jaddaf"
+  ],
+  operatingHours: [
+    { day: "Saturday", hours: "24 Hours" },
+    { day: "Sunday", hours: "24 Hours" },
+    { day: "Monday", hours: "24 Hours" },
+    { day: "Tuesday", hours: "24 Hours" },
+    { day: "Wednesday", hours: "24 Hours" },
+    { day: "Thursday", hours: "24 Hours" },
+    { day: "Friday", hours: "24 Hours" },
   ],
   city: "Dubai",
   country: "UAE",
@@ -76,7 +85,6 @@ export const SiteConfig = {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
-    { name: "Gallery", href: "/gallery" }
   ],
   footerhrefs: [
     { title: "About Us", href: "/about" },
@@ -100,5 +108,5 @@ export const SiteConfig = {
 }
 
 const {
-  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, whatsappNumber, callNumber, displayNumber, description, email, url, brandName, authorName
+  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, whatsappNumber, callNumber,operatingHours, displayNumber, description, email, url, brandName, authorName
 } = SiteConfig;

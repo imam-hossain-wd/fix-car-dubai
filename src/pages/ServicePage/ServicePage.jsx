@@ -51,6 +51,7 @@ import { ServiceCard } from "@/components/view/Card/ServiceCard";
 import { ServiceData } from "@/data/services";
 import { SiteConfig } from "@/config/site";
 import Link from "next/link";
+import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
 
 
 
@@ -62,6 +63,11 @@ export default function ServicePage() {
   const pageKeywords = "car services Dubai, mobile auto repair Dubai, Dubai car mechanics, vehicle repair services, on-site car service, Dubai auto care, emergency car services Dubai";
 
   const servicesPageSchema = getServicesPageSchema();
+
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' }
+  ]
 
   return (
     <div className="min-h-screen">
@@ -77,17 +83,21 @@ export default function ServicePage() {
       {/* Services Section */}
       <section className="">
 
-<div className="text-center py-10 mb-10 bg-amber-50">
-      <div className="inline-flex items-center justify-center mb-4">
-        <div className="w-12 h-0.5 bg-amber-400 mr-4"></div>
-        <span className="text-amber-600 font-semibold uppercase tracking-wider text-sm">Our Services</span>
-        <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
-      </div>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Professional Automotive Services</h1>
-      <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
-        We offer a comprehensive range of automotive services to keep your vehicle running smoothly and safely on Dubai roads.
-      </p>
-    </div>
+        <div className="px-4 mx-auto bg-secondary/90 border-b">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+
+        <div className="text-center py-10 mb-10 bg-amber-50">
+          <div className="inline-flex items-center justify-center mb-4">
+            <div className="w-12 h-0.5 bg-amber-400 mr-4"></div>
+            <span className="text-amber-600 font-semibold uppercase tracking-wider text-sm">Our Services</span>
+            <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Professional Automotive Services</h1>
+          <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
+            We offer a comprehensive range of automotive services to keep your vehicle running smoothly and safely on Dubai roads.
+          </p>
+        </div>
         <div className="container mx-auto px-4">
           {/* Section Header */}
 
@@ -110,18 +120,18 @@ export default function ServicePage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                 <Link href={`tel:${SiteConfig.callNumber}`}>
-                  Call Now: {SiteConfig.callNumber}
-                 </Link>
+                  <Link href={`tel:${SiteConfig.callNumber}`}>
+                    Call Now: {SiteConfig.callNumber}
+                  </Link>
                 </button>
                 <button className="bg-emerald-500 border-2 border-emerald-500 text-white hover:bg-emerald-600 hover:border-emerald-600 font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-md flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd" />
                   </svg>
-                  
-                   <Link href={`tel:${SiteConfig.whatsappNumber}`}>
-                  WhatsApp Us
-                 </Link>
+
+                  <Link href={`tel:${SiteConfig.whatsappNumber}`}>
+                    WhatsApp Us
+                  </Link>
                 </button>
               </div>
             </div>

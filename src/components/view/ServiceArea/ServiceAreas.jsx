@@ -1,105 +1,101 @@
-import { Button } from '@/components/ui/button'
+
 import { SiteConfig } from '@/config/site';
-import { MapPin, Clock, Phone } from 'lucide-react'
+import { MapPin, Clock} from 'lucide-react'
 
 
-export default function ServiceAreas() {
-    const { serviceAreas, city, country } = SiteConfig;
-    
-    const operatingHours = [
-        { day: 'Saturday', hours: '24 Hours' },
-        { day: 'Sunday', hours: '24 Hours' },
-        { day: 'Monday', hours: '24 Hours' },
-        { day: 'Tuesday', hours: '24 Hours' },
-        { day: 'Wednesday', hours: '24 Hours' },
-        { day: 'Thursday', hours: '24 Hours' },
-        { day: 'Friday', hours: '24 Hours' }
-    ];
+export const ServiceAreas = () => {
+
+    const {
+      city, serviceAreas , operatingHours
+    } = SiteConfig;
 
     return (
-        <section className="bg-gradient-to-b from-white to-gray-50 py-8 sm:py-16">
+        <section className="bg-gradient-to-b from-white via-gray-50 to-white py-2">
             <div className="container mx-auto px-4 max-w-6xl">
                 {/* Header Section */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-6">
                     <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                         24/7 Service Coverage
                     </span>
-                    <h2 className="text-3xl font-bold sm:text-4xl mb-4">
-                        Our <span className="text-primary">Service Areas</span> in {city}
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        We provide fast, reliable mobile car services across all neighborhoods in Dubai
-                    </p>
+                   
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-5">
+                <div className="flex flex-col lg:flex-row gap-8">
                     {/* Service Areas Grid */}
                     <div className="flex-1">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
                             {serviceAreas.map((area, index) => (
-                                <div
-                                    key={index}
-                                    className="group relative overflow-hidden p-4 rounded-xl bg-white border border-gray-200 hover:border-primary/50 transition-all shadow-sm hover:shadow-md"
-                                >
-                                    <div className="flex items-start gap-3">
-                                        <div className="bg-primary/10 p-2 rounded-full">
-                                            <MapPin className="w-4 h-4 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-medium text-sm text-gray-900">{area}</h3>
-                                            <p className="text-xs text-gray-500">{city}, {country}</p>
-                                        </div>
-                                    </div>
-                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </div>
+                                <ServiceAreaCard key={index} area={area} city={city} />
                             ))}
                         </div>
                     </div>
 
-                    {/* Operating Hours Card */}
-                    <div className="lg:w-80 bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-fit">
-                        <div className="flex justify-center items-center gap-3 mb-5">
-                            <div className="bg-primary/10 p-2 rounded-full">
-                                <Clock className="w-5 h-5 text-primary" />
+                    {/* Operating Hours Sidebar */}
+                    <div className="lg:w-80 bg-white rounded-2xl shadow-lg p-6 h-fit">
+                        <div className="flex justify-center items-center gap-3 mb-6">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+
+                           
+                                < Clock className="fas fa-clock text-primary text-xl" />
                             </div>
-                            <h3 className="text-lg font-semibold">Operating Hours</h3>
-                        </div>
-                        
-                        <div className="space-y-3">
-                            {operatingHours.map((day, index) => (
-                                <div key={index} className="flex justify-between items-center">
-                                    <span className="text-gray-700 font-medium">{day.day}</span>
-                                    <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                                        {day.hours}
-                                    </span>
-                                </div>
-                            ))}
+                            <h3 className="text-xl font-semibold">Operating Hours</h3>
                         </div>
 
-                        {/* <div className="mt-8 bg-primary/5 rounded-lg p-4 border border-primary/10">
-                            <p className="text-sm text-gray-700 mb-3">
-                                Emergency services available 24/7
-                            </p>
-                            <Button className="w-full" size="sm">
-                                Call Now
-                            </Button>
-                        </div> */}
+                        <div className="space-y-1">
+                            {operatingHours.map((item, index) => (
+                                <OperatingHourRow key={index} day={item.day} hours={item.hours} />
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {/* CTA Section */}
-                <div className="text-center mt-12">
-                    <p className="text-gray-600 mb-6">Don't see your area listed? We're expanding daily!</p>
+                <div className="text-center mt-10">
+                    <p className="text-gray-600 mb-8">Don't see your area listed? We're expanding daily!</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Button className="px-8 py-4">
-                            Check Coverage in Your Area
-                        </Button>
-                        <Button variant="outline" className="px-8 py-4 border-primary text-primary">
-                            <Phone className="w-4 h-4 mr-2" /> Contact Us
-                        </Button>
+                        <button className="bg-primary hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors flex items-center justify-center">
+                            <i className="fas fa-search-location mr-2"></i> Check Coverage in Your Area
+                        </button>
+                        <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-xl transition-colors flex items-center justify-center">
+                            <i className="fas fa-phone-alt mr-2"></i> Contact Us
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
+
+
+const ServiceAreaCard = ({ area , city }) => {
+    return (
+        <div className="service-area-card bg-white rounded-2xl p-5 shadow-md transition-all duration-300 cursor-pointer">
+            <div className="flex items-center mb-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                    <MapPin className="fas fa-map-marker-alt text-primary" />
+                </div>
+                <div>
+                    <h3 className="font-semibold text-gray-900"></h3>
+                    <p className="text-sm text-gray-500">{area} {city}</p>
+                </div>
+            </div>
+            <div className="mt-2">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium 'bg-green-100 text-green-800">
+                    Available
+                </span>
+            </div>
+        </div>
+    );
+};
+
+
+const OperatingHourRow = ({ day, hours }) => {
+    return (
+        <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
+            <span className="text-gray-700 font-medium">{day}</span>
+            <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">
+                {hours}
+            </span>
+        </div>
+    );
+};

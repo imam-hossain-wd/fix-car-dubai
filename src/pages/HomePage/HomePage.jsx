@@ -15,6 +15,7 @@ import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import BookAppointmentForm from '@/components/Forms/AppointmentForm'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
+import BlogCarousel from '../BlogPage/BlogCarousel'
 
 
 
@@ -55,6 +56,7 @@ export default function HomePage() {
             <MapComponent />
             <Reviews />
             <GetTouch />
+            <BlogCarousel />
             <FAQSection />
             <BookAppointmentForm />
 

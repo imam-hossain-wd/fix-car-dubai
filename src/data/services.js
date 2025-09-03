@@ -18,6 +18,7 @@ const {
 export const ServiceData = [
   {
     "title": "Car Battery Replacement Dubai – Fast & Reliable Mobile Service",
+    "name": "Car Battery Replacement",
     "metaTitle": "Car Battery Replacement in Dubai – On-Site Emergency Service",
     "metaDescription": "Professional car battery replacement in Dubai. Fast, on-site service with expert technicians. Call now for reliable battery solutions.",
     "features": [
@@ -130,6 +131,7 @@ export const ServiceData = [
   },
   {
     "title": "Car AC Repair Dubai – Professional Car Air Conditioning Services",
+    "name": "Car AC Repair",
     "metaTitle": "Car AC Repair Dubai | Best Auto Air Conditioning Service",
     "metaDescription": "Top-rated car AC repair in Dubai. Fast, expert service for cooling issues, leaks & bad smells. Book your car air conditioning service today!",
     "features": [
@@ -151,7 +153,10 @@ export const ServiceData = [
     "intro": {
       "heading": "Beat the Dubai Heat with Reliable Car AC Repair",
       "subheading": "Stay Cool with Professional Car Air Conditioning Service",
-      "content": "Summer temperatures in Dubai can reach up to 60°C inside a car, making a functioning air conditioner absolutely essential. Whether you're commuting or heading out for a weekend drive, don’t let a faulty AC ruin your comfort. Our expert car AC repair service in Dubai ensures you're cool, safe, and comfortable on every journey."
+      // "content": "Summer temperatures in Dubai can reach up to 60°C inside a car, making a functioning air conditioner absolutely essential. Whether you're commuting or heading out for a weekend drive, don’t let a faulty AC ruin your comfort. Our expert car AC repair service in Dubai ensures you're cool, safe, and comfortable on every journey."
+     "content": "Dubai’s scorching summer heat can make driving extremely uncomfortable without a properly functioning car air conditioning system. Inside a vehicle, temperatures can rise above 60°C, making a reliable AC not just a comfort but a necessity. At Fix Car Dubai, we specialize in professional car AC repair across Dubai, ensuring your vehicle stays cool and comfortable at all times.Our expert technicians provide mobile car AC repair and gas refill services anywhere in the city, including Al Karama, Oud Metha, Bur Dubai, Deira, and Al Jaddaf. Whether your AC is blowing hot air, producing strange noises, or giving off unpleasant odors, we quickly diagnose and fix the issue using advanced tools and genuine refrigerants like R134a and R1234yf."
+
+
     },
     "whyChooseUs": {
       "heading": "Why Choose Us for Car AC Repair in Dubai?",
@@ -242,6 +247,7 @@ export const ServiceData = [
   },
   {
   "title": "Car Engine Oil Change Dubai – Premium Oils & Expert Service",
+  "name": "Car Engine Oil Change",
   "metaTitle": "Car Engine Oil Change in Dubai – Mobile & Workshop Service",
   "metaDescription": "Professional car engine oil change in Dubai with premium synthetic oils, oil filter replacement, and expert mobile service. Keep your engine healthy and long-lasting.",
   "features": [
@@ -354,6 +360,7 @@ export const ServiceData = [
 
 {
   "title": "Car Gear Oil Change Dubai – Smooth Gear Shifts & Transmission Care",
+  "name": "Car Gear Oil Change",
   "metaTitle": "Car Gear Oil Change in Dubai – Transmission Oil Replacement Service",
   "metaDescription": "Expert car gear oil change service in Dubai for manual and automatic cars. Improve gear shifting, reduce wear, and extend transmission life.",
   "features": [
@@ -457,6 +464,7 @@ export const ServiceData = [
 ,
   {
     "title": "Car Brake Pad Repair and Replacement in Dubai – Affordable & Professional Service",
+    "name": "Brake Pad Repair & Replacement",
     "metaTitle": "Car Brake Pad Repair and Replacement Dubai | Expert Brake Services",
     "metaDescription": "Get expert car brake pad repair and replacement in Dubai. Fast, affordable, and professional service at your doorstep. Call now for a free quote!",
     "features": [
@@ -569,6 +577,7 @@ export const ServiceData = [
   },
   {
     "title": "Car Radiator Repair and Replacement Dubai – Reliable & Affordable Service",
+    "name": "Radiator Repair & Replacement",
     "metaTitle": "Car Radiator Repair and Replacement Dubai | Expert Radiator Services",
     "features": [
       "Radiator repair",
@@ -682,6 +691,7 @@ export const ServiceData = [
 
   {
     "title": "ABS System Repair Dubai – Expert Anti-Lock Braking Services",
+    "name": "ABS System Repair",
     "metaTitle": "Professional ABS System Repair Services in Dubai | 24 Car Service Dubai",
     "metaDescription": "Reliable ABS system repair in Dubai to ensure your vehicle’s safety. Certified ABS diagnostics and repair by expert technicians at 24 Car Service Dubai.",
     "features": [
@@ -794,6 +804,7 @@ export const ServiceData = [
   },
  {
   "title": "Car Maintenance Dubai – Complete Service for All Makes & Models",
+  "name": "Car Maintenance",
   "metaTitle": "Car Maintenance in Dubai – Full Car Service Packages",
   "metaDescription": "Professional car maintenance service in Dubai including oil change, brakes, AC, battery replacement, and diagnostics. Affordable packages for all car brands.",
   "features": [
@@ -906,6 +917,7 @@ export const ServiceData = [
 ,
   {
     "title": "Car Detailing Dubai",
+    "name": "Car Detailing",
     "metaTitle": "DenamoCraft Custom Car Transformation Services in Dubai | Personalized Car Mods",
     "metaDescription": "Transform your vehicle with DenamoCraft’s tailored car transformation services in Dubai. Expert custom modifications, styling, and performance upgrades.",
     "features": [
@@ -1018,6 +1030,7 @@ export const ServiceData = [
 
   {
   "title": "Car AC Gas Refill Dubai – Stay Cool with Professional Service",
+  "name": "AC Gas Refill",
   "metaTitle": "Car AC Gas Filling in Dubai – Fast & Reliable AC Recharge",
   "metaDescription": "Expert car AC gas refill service in Dubai. Restore cooling performance with professional AC recharge, leak checks, and same-day service.",
   "features": [

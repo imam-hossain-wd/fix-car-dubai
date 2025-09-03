@@ -1,37 +1,63 @@
-// import ServiceAreas from "@/components/view/ServiceArea/ServiceAreas";
 
-// export default function AreasWeServe() {
-//     return (
-//         <div>
-//             <ServiceAreas />
-//         </div>
-//     )
-// }
-
-
-import ServiceAreas from "@/components/view/ServiceArea/ServiceAreas";
 import { Button } from "@/components/ui/button";
+import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
+import { ServiceAreas } from "@/components/view/ServiceArea/ServiceAreas";
 import { MapPin, ShieldCheck, Clock, Phone } from "lucide-react";
 
 export default function AreasWeServe() {
+
+    const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Areas We Serve', href: '/areas-we-serve' }
+  ]
+
+
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-20">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Areas We <span className="text-yellow-300">Proudly Serve</span>
-          </h1>
-          <p className="text-lg text-white/90 mb-8">
-            24 Car Service Dubai provides fast, reliable, and 24/7 on-demand car repair 
-            and maintenance services across all neighborhoods in Dubai.
-          </p>
-          <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold">
-            <Phone className="w-5 h-5 mr-2" /> Call Now for Instant Help
-          </Button>
+
+       <div className="px-4 mx-auto bg-secondary/90 border-b">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
+     <section className="relative bg-amber-50 text-white py-10">
+        {/* Decorative elements from service page */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white"></div>
+          <div className="absolute bottom-10 right-10 w-16 h-16 rounded-full bg-amber-300"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-blue-400"></div>
         </div>
-        {/* Subtle background overlay */}
-        <div className="absolute inset-0 bg-black/20" />
+        
+        <div className="container mx-auto px-4 text-center text-black relative z-10">
+          {/* Title decoration from service page */}
+          <div className="inline-flex items-center justify-center mb-4">
+            <div className="w-12 h-0.5 bg-black mr-4"></div>
+            <span className=" font-semibold uppercase tracking-wider text-sm">Our Coverage</span>
+            <div className="w-12 h-0.5 bg-black ml-4"></div>
+          </div>
+          
+          {/* Main heading from areas page */}
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            Areas We <span className="text-black">Proudly Serve</span>
+          </h1>
+          
+          {/* Subheading combining both styles */}
+          <p className="text-lg md:text-xl text-black max-w-3xl mx-auto">
+            We provide fast, reliable mobile car services across all neighborhoods in Dubai
+          </p>
+
+          {/* CTA buttons from areas page */}
+          {/* <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+            <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center min-w-[180px]">
+              <i className="fas fa-phone-alt mr-3"></i>
+              Call Now
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center min-w-[180px]">
+              <i className="fab fa-whatsapp mr-3"></i>
+              WhatsApp
+            </button>
+          </div> */}
+        </div>
       </section>
 
       {/* Service Areas Component */}
