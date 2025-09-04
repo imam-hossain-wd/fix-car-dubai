@@ -1,11 +1,14 @@
 
 'use client'
 import Head from 'next/head';
-import { Calendar, User, Clock, ArrowRight, Share2, BookOpen } from 'lucide-react';
+import { Calendar, User, Clock, ArrowRight, Share2, BookOpen, Snowflake, Battery, Settings, Wrench, 
+  Disc, Droplet, Circle, Zap  } from 'lucide-react';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogdata } from '@/data/blogdata';
 import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb';
+import { CategoryCard } from '@/components/view/Card/CategoryCard';
 
 // Reusable Blog Card Component
 export const BlogCard = ({ blog }) => {
@@ -24,8 +27,70 @@ export const BlogCard = ({ blog }) => {
     return `${minutes} min read`;
   };
 
+   const categories = [
+    {
+      name: 'AC Repair',
+      slug: 'ac-repair',
+      count: 12,
+      gradient: 'bg-gradient-to-r from-blue-500 to-cyan-400',
+      icon: Snowflake // You'll need to import this icon
+    },
+    {
+      name: 'Battery',
+      slug: 'battery',
+      count: 8,
+      gradient: 'bg-gradient-to-r from-amber-500 to-yellow-400',
+      icon: Battery // You'll need to import this icon
+    },
+    {
+      name: 'Engine',
+      slug: 'engine',
+      count: 15,
+      gradient: 'bg-gradient-to-r from-red-500 to-orange-400',
+      icon: Settings // You'll need to import this icon
+    },
+    {
+      name: 'Maintenance',
+      slug: 'maintenance',
+      count: 20,
+      gradient: 'bg-gradient-to-r from-green-500 to-emerald-400',
+      icon: Wrench // You'll need to import this icon
+    },
+    {
+      name: 'Brakes',
+      slug: 'brakes',
+      count: 9,
+      gradient: 'bg-gradient-to-r from-purple-500 to-fuchsia-400',
+      icon: Disc // You'll need to import this icon
+    },
+    {
+      name: 'Oil Change',
+      slug: 'oil-change',
+      count: 7,
+      gradient: 'bg-gradient-to-r from-rose-500 to-pink-400',
+      icon: Droplet // You'll need to import this icon
+    },
+    {
+      name: 'Tires',
+      slug: 'tires',
+      count: 11,
+      gradient: 'bg-gradient-to-r from-indigo-500 to-blue-400',
+      icon: Circle // You'll need to import this icon
+    },
+    {
+      name: 'Electrical',
+      slug: 'electrical',
+      count: 6,
+      gradient: 'bg-gradient-to-r from-yellow-500 to-amber-400',
+      icon: Zap // You'll need to import this icon
+    }
+  ];
+
+
+
   return (
     <article className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+
       {/* Image Container */}
       <div className="relative h-48 overflow-hidden">
         <Image
@@ -49,7 +114,6 @@ export const BlogCard = ({ blog }) => {
           </span>
         </div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         {/* Title */}
@@ -118,21 +182,21 @@ export default function BlogPage() {
         <meta property="og:url" content="https://www.24carservicedubai.com/blog" />
       </Head>
 
-                 <div className="px-4 mx-auto bg-secondary/90 border-b">
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
+      <div className="px-4 mx-auto bg-secondary/90 border-b">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
-          <div className="text-center py-10 mb-10 bg-amber-50">
-            <div className="inline-flex items-center justify-center mb-4">
-              <div className="w-12 h-0.5 bg-amber-400 mr-4"></div>
-              <span className="text-amber-600 font-semibold uppercase tracking-wider text-sm">EXPERT GUIDES</span>
-              <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Fix Car Dubai Blog</h1>
-            <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Stay updated with professional car repair tips, maintenance hacks, and expert guidance designed for Dubai drivers.
-            </p>
-          </div>
+      <div className="text-center py-10 mb-10 bg-amber-50">
+        <div className="inline-flex items-center justify-center mb-4">
+          <div className="w-12 h-0.5 bg-amber-400 mr-4"></div>
+          <span className="text-amber-600 font-semibold uppercase tracking-wider text-sm">EXPERT GUIDES</span>
+          <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
+        </div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Fix Car Dubai Blog</h1>
+        <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
+          Stay updated with professional car repair tips, maintenance hacks, and expert guidance designed for Dubai drivers.
+        </p>
+      </div>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">
 
@@ -147,46 +211,26 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Categories Section */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { name: 'AC Repair', count: 12, color: 'bg-blue-100 text-blue-600' },
-                { name: 'Battery', count: 8, color: 'bg-amber-100 text-amber-600' },
-                { name: 'Engine', count: 15, color: 'bg-red-100 text-red-600' },
-                { name: 'Maintenance', count: 20, color: 'bg-green-100 text-green-600' }
-              ].map((category, index) => (
-                <Link
-                  key={index}
-                  href={`/blog/category/${category.name.toLowerCase()}`}
-                  className="p-4 rounded-xl hover:shadow-md transition-all duration-300"
-                >
-                  <div className={`w-12 h-12 rounded-lg ${category.color} flex items-center justify-center mb-3`}>
-                    <BookOpen className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
-                  <p className="text-sm text-gray-500">{category.count} articles</p>
-                </Link>
-              ))}
-            </div>
-          </div>
+          <div className="bg-gradient-to-r from-primary to-green-600 rounded-2xl p-6 sm:p-8 text-white text-center">
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+              Stay Updated with Car Care Tips
+            </h2>
+            <p className="text-white/80 mb-5 sm:mb-6 text-sm sm:text-base">
+              Get the latest maintenance tips and exclusive offers directly to your inbox
+            </p>
 
-          {/* Newsletter Subscription */}
-          <div className="bg-gradient-to-r from-primary to-green-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-2xl font-bold mb-4">Stay Updated with Car Care Tips</h2>
-            <p className="text-white/80 mb-6">Get the latest maintenance tips and exclusive offers directly to your inbox</p>
-            <div className="flex max-w-md mx-auto gap-3">
+            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex-1 bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white text-sm sm:text-base"
               />
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base">
                 Subscribe
               </button>
             </div>
           </div>
+
         </div>
       </div>
     </>

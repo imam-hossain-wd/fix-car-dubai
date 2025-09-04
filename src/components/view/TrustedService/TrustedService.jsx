@@ -175,29 +175,6 @@ export function TrustedService() {
               </div>
             </div>
 
-            {/* Client Love */}
-            <div className="bg-gradient-to-r from-primary to-green-600 p-8 rounded-2xl text-white">
-              <div className="flex items-start mb-4">
-                <Heart className="h-6 w-6 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-lg">
-                  <span className="text-2xl font-bold">98%</span> of our clients return for repeat service and refer us to friends
-                </p>
-              </div>
-              <div className="flex items-center justify-between mt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">10K+</div>
-                  <div className="text-sm">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">4.9/5</div>
-                  <div className="text-sm">Google Rating</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">24/7</div>
-                  <div className="text-sm">Support</div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Value Propositions */}
@@ -241,34 +218,11 @@ export function TrustedService() {
               </div>
             </div>
 
-            {/* CTA Card */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Ready to Experience the Difference?</h3>
-              <p className="text-gray-600 mb-6">Join thousands of satisfied Dubai drivers who trust us with their vehicles</p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="flex-1 gap-2 py-6">
-                  <Calendar className="h-5 w-5" />
-                  Book Now
-                </Button>
-                <Button variant="outline" className="flex-1 gap-2 py-6 border-primary text-primary hover:bg-primary/10">
-                  <Phone className="h-5 w-5" />
-                  Call Us
-                </Button>
-              </div>
-              
-              <div className="flex items-center justify-center mt-6 pt-6 border-t border-gray-200">
-                <div className="flex items-center text-sm text-gray-600">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>Servicing all areas of Dubai</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Trust Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gray-200">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gray-200">
           {[
             { icon: <Users className="h-8 w-8" />, value: "10,000+", label: "Satisfied Clients" },
             { icon: <Star className="h-8 w-8" />, value: "4.9/5", label: "Customer Rating" },
@@ -283,7 +237,7 @@ export function TrustedService() {
               <div className="text-sm text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

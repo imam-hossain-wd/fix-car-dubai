@@ -8,8 +8,8 @@ export const SiteConfig = {
   email: "fixcardubai@gmail.com",
   description: "Your On-Demand Car Savior Anywhere, Anytime in Dubai!",
   displayNumber: "+971 56 870 3512",
-  callNumber: "+971568703512",
-  whatsappNumber: "+971568703512",
+  numberCallLink: "tel:$+971568703512",
+  whatsappCallLink: "https://wa.me/971568703512",
   location: "Al Karama, Dubai - UAE",
   coordinate: "25.2485261,55.3034075",
   serviceAreas: [

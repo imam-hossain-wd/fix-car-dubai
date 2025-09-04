@@ -69,7 +69,7 @@ export function WhoWeAre() {
             {/* Mission Statement */}
             <div className="relative">
               <div className="absolute -left-8 top-0 text-6xl opacity-10 font-serif">"</div>
-              <blockquote className="text-xl font-medium text-gray-800 italic relative z-10">
+              <blockquote className="text-lg px-2 font-medium text-gray-800  relative z-10">
                 To provide unparalleled 24/7 on-demand car services throughout Dubai with immediate, reliable, and professional assistance.
               </blockquote>
             </div>
@@ -99,11 +99,11 @@ export function WhoWeAre() {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-5 hover:bg-primary/5 transition-colors group">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                  <div className="flex flex-col md:flex-row  items-center gap-4">
+                    <div className="p-3 text-white bg-primary/10 rounded-xl transition-colors">
                       {item.icon}
                     </div>
-                    <div>
+                    <div className="text-center md:text-left">
                       <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
@@ -159,3 +159,5 @@ export function WhoWeAre() {
     </section>
   );
 }
+
+

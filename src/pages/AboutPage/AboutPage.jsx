@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
 import { TrustedService } from "@/components/view/TrustedService/TrustedService";
 import { WhoWeAre } from "@/components/view/WhoWeAre/WhoWeAre";
-import { CheckCircle, Phone } from "lucide-react";
+import { CheckCircle} from "lucide-react";
 import Head from "next/head";
 
 export default function AboutPage() {

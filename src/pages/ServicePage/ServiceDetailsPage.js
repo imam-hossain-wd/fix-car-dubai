@@ -60,7 +60,7 @@ function ServiceDetailsPage({ service }) {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src={service.service_image}
+            src={service ? service?.service_image : ""}
             alt={service?.title}
             fill
             className="object-cover"

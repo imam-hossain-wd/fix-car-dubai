@@ -4,7 +4,6 @@ import { FAQSection } from '@/components/view/FAQSection/FAQSection'
 import HomeBanner from '@/components/view/Home/HomeBanner/HomeBanner'
 import Reviews from '@/components/view/Reviews/Reviews'
 import React from 'react'
-import BlogPage from '../BlogPage/BlogPage'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
 import { getLocalBusinessSchema } from '@/schemas/localBusinessSchema'
 import { getOrganizationSchema } from '@/schemas/organizationSchema'
@@ -14,8 +13,12 @@ import FeaturedServices from '@/components/view/FeaturedServices/FeaturedService
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import BookAppointmentForm from '@/components/Forms/AppointmentForm'
-import { TrustedService } from '@/components/view/TrustedService/TrustedService'
+import { TrustedByDubai, TrustedService} from '@/components/view/TrustedService/TrustedService'
 import BlogCarousel from '../BlogPage/BlogCarousel'
+import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
+import BrandsWeService from '@/components/view/BrandsWeServe/BrandsWeServe'
+
+// import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
 
 
 
@@ -52,15 +55,17 @@ export default function HomePage() {
 
             <FeaturedServices />
             <WhoWeAre />
+            <WhyChooseUs />
+            <BrandsWeService />
+            {/* <WhyChooseUs /> */}
+            {/* <TrustedByDubai /> */}
             <TrustedService />
-            <MapComponent />
             <Reviews />
-            <GetTouch />
+            {/* <BookAppointmentForm /> */}
             <BlogCarousel />
+            <MapComponent />
+            <GetTouch />
             <FAQSection />
-            <BookAppointmentForm />
-
-            <BlogPage />
         </div>
     )
 }

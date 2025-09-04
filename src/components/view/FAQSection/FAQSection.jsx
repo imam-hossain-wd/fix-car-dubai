@@ -10,7 +10,9 @@ import { SiteConfig } from "@/config/site"
 export function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null)
 
-  const { phoneAction, whatsappCall, phoneNumber } = SiteConfig;
+const {
+  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, whatsappNumber, operatingHours, displayNumber, whatsappCallLink, numberCallLink, description, email, url, brandName, authorName
+} = SiteConfig;
 
   const faqs = [
     {
@@ -100,10 +102,10 @@ export function FAQSection() {
               >
                 <div className="flex items-center gap-4">
                   <div className={cn(
-                    "p-3 rounded-lg transition-colors",
+                    "p-3 rounded-lg transition-colors ",
                     activeIndex === index ?
                       "bg-primary text-white" :
-                      "bg-primary/10 text-[#003053] dark:bg-[#003053]/20 dark:text-white"
+                      "bg-primary/10 text-primary dark:bg-[#003053]/20 dark:text-white"
                   )}>
                     {faq.icon}
                   </div>
@@ -143,7 +145,7 @@ export function FAQSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={`tel:${phoneAction}`}>
+                <Link href={numberCallLink}>
 
 
                   <Button
@@ -151,12 +153,12 @@ export function FAQSection() {
                     size="lg"
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    Call {phoneNumber}
+                    Call Now {displayNumber}
                   </Button>
                 </Link>
 
 
-                <Link href={`https://wa.me/${whatsappCall}`}>
+                <Link href={whatsappCallLink}>
                   <Button
                     variant="outline"
                     className="h-14 px-8 text-lg font-medium border-primary text-primary hover:bg-primary/90 hover:text-white dark:border-white dark:text-white dark:hover:bg-white/10"
