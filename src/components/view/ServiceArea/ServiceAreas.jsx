@@ -2,6 +2,7 @@
 "use client"
 import { SiteConfig } from '@/config/site';
 import { MapPin, Clock} from 'lucide-react'
+import Link from 'next/link';
 
 
 export const ServiceAreas = () => {
@@ -70,7 +71,7 @@ export const ServiceAreas = () => {
 
 const ServiceAreaCard = ({ area , city }) => {
     return (
-        <a 
+        <Link 
           href={area.href} 
           className="service-area-card bg-white rounded-2xl p-5 shadow-md transition-all duration-300 cursor-pointer block"
         >
@@ -88,7 +89,7 @@ const ServiceAreaCard = ({ area , city }) => {
                     Available
                 </span>
             </div>
-        </a>
+        </Link>
     );
 };
 
