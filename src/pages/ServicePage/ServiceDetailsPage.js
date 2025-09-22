@@ -236,12 +236,16 @@ function ServiceDetailsPage({ service }) {
                 <CardContent>
                   <div className="space-y-3 grid grid-cols-2">
                     {SiteConfig.serviceAreas?.map((location, index) => (
-                      <div key={index} className="flex flex-2 items-center gap-3">
+                      <a
+                        key={index}
+                        href={location.href}
+                        className="flex flex-2 items-center gap-3 hover:text-primary transition-colors"
+                      >
                         <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
                         <span className="text-sm">
-                          {location.replace('📍', '').trim()}
+                          {location.name}
                         </span>
-                      </div>
+                      </a>
                     ))}
                   </div>
                 </CardContent>

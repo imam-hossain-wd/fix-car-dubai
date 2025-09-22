@@ -1,10 +1,12 @@
 
+
+
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
 import { ServiceAreas } from "@/components/view/ServiceArea/ServiceAreas";
 import { MapPin, ShieldCheck, Clock, Phone } from "lucide-react";
 
-export default function AreasWeServe() {
+export default function AreasWeServePages() {
 
     const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -146,5 +148,3 @@ export default function AreasWeServe() {
     </main>
   );
 }
-
-

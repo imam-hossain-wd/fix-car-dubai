@@ -222,7 +222,7 @@ export function TrustedService() {
         </div>
 
         {/* Trust Badges */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gray-200">
           {[
             { icon: <Users className="h-8 w-8" />, value: "10,000+", label: "Satisfied Clients" },
             { icon: <Star className="h-8 w-8" />, value: "4.9/5", label: "Customer Rating" },
@@ -237,7 +237,7 @@ export function TrustedService() {
               <div className="text-sm text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

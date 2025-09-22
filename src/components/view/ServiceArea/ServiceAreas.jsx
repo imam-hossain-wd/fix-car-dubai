@@ -1,4 +1,5 @@
 
+"use client"
 import { SiteConfig } from '@/config/site';
 import { MapPin, Clock} from 'lucide-react'
 
@@ -69,22 +70,25 @@ export const ServiceAreas = () => {
 
 const ServiceAreaCard = ({ area , city }) => {
     return (
-        <div className="service-area-card bg-white rounded-2xl p-5 shadow-md transition-all duration-300 cursor-pointer">
+        <a 
+          href={area.href} 
+          className="service-area-card bg-white rounded-2xl p-5 shadow-md transition-all duration-300 cursor-pointer block"
+        >
             <div className="flex items-center mb-3">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
                     <MapPin className="fas fa-map-marker-alt text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-900"></h3>
-                    <p className="text-sm text-gray-500">{area} {city}</p>
+                    <h3 className="font-semibold text-gray-900">{area.name}</h3>
+                    <p className="text-sm text-gray-500">{city}</p>
                 </div>
             </div>
             <div className="mt-2">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium 'bg-green-100 text-green-800">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     Available
                 </span>
             </div>
-        </div>
+        </a>
     );
 };
 

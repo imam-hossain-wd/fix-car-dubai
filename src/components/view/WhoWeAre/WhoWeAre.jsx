@@ -155,6 +155,8 @@ export function WhoWeAre() {
             </div>
           ))}
         </div>
+
+        
       </div>
     </section>
   );

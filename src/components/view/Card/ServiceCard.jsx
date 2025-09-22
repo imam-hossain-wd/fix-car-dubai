@@ -105,7 +105,7 @@ export const ServiceCard = ({ service }) => {
           )}
 
           <Button className="rounded-lg gap-2 text-xs group-hover:bg-primary/90 transition-all" asChild>
-            <Link href={`/services/${service?.slug}`}>
+            <Link href={`/dubai/services/${service?.slug}`}>
               Explore
               <Zap className="h-4 w-4 group-hover:animate-pulse" />
             </Link>

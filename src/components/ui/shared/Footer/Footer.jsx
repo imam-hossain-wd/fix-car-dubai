@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {  MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
+import { MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 import Image from "next/image";
 import { bandlogo, serviceImages } from "@/utils/assets";
@@ -16,28 +16,28 @@ export function Footer() {
     city
   } = SiteConfig;
 
-  
+
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#F4A723]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F4A723]/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
-      
+
       {/* Pattern overlay */}
       <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMyIgZmlsbD0iI2Y0YTcyMyIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')]"></div>
 
       <div className="container relative mx-auto px-4 py-16">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 relative z-10">
-          
+
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center -my-14 -ml-10 ">
-            <Image className="w-40 h-40" src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="car fix dubai logo" />
-            <h3 className="text-3xl text-primary font-bold -ml-10">Fix Car Dubai</h3>
-          </Link>
-            
+              <Image className="w-40 h-40" src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="car fix dubai logo" />
+              <h3 className="text-3xl text-primary font-bold -ml-10">Fix Car Dubai</h3>
+            </Link>
+
             <p className="text-sm font-medium text-gray-300 leading-relaxed mt-5 ">
               Dubai's premier mobile car repair service, delivering expert solutions 24/7 at your doorstep.
             </p>
@@ -118,17 +118,20 @@ export function Footer() {
             </h3>
             <div className="grid grid-cols-1 gap-1">
               {serviceAreas.map((location, index) => (
-                <div 
-                  key={index} 
+                <a
+                  key={index}
+                  href={location.href}
                   className="flex items-center gap-3 p-1 rounded-lg hover:bg-[#F4A723]/10 transition-all border border-transparent hover:border-[#F4A723]/20"
                 >
                   <div className="w-2 h-2 rounded-full bg-[#F4A723]"></div>
-                  <span className="text-sm text-gray-300">{location}, {city}</span>
-                </div>
+                  <span className="text-sm text-gray-300">
+                    {location.name}, {city}
+                  </span>
+                </a>
               ))}
             </div>
-            
           </div>
+
 
           {/* Company & Social Column */}
           <div className="space-y-4">
@@ -164,14 +167,14 @@ export function Footer() {
                   </Link>
                 ))}
               </div>
-              
+
               {/* Newsletter Signup */}
               <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/5">
                 <p className="text-sm font-medium mb-2 text-white">Stay Updated</p>
                 <div className="flex gap-2">
-                  <input 
-                    type="email" 
-                    placeholder="Your email" 
+                  <input
+                    type="email"
+                    placeholder="Your email"
                     className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#F4A723]"
                   />
                   <button className="bg-[#F4A723] text-gray-900 px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#E5971C] transition-colors">

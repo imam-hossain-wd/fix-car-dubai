@@ -13,17 +13,47 @@ export const SiteConfig = {
   location: "Al Karama, Dubai - UAE",
   coordinate: "25.2485261,55.3034075",
   serviceAreas: [
-    "Al Karama",
-    "Oud Metha",
-    "Al Hamriya",
-    "Al Jaffiliya",
-    "Zabeel",
-    "Al Fahidi",
-    "Al Raffa",
-    "Al Mina",
-    "Al Hudaiba",
-    "Al Jaddaf"
-  ],
+  {
+    "name": "Al Karama",
+    "href": "/dubai/area-we-serve/al-karama"
+  },
+  {
+    "name": "Oud Metha",
+    "href": "/dubai/area-we-serve/oud-metha"
+  },
+  {
+    "name": "Al Hamriya",
+    "href": "/dubai/area-we-serve/al-hamriya"
+  },
+  {
+    "name": "Al Jaffiliya",
+    "href": "/dubai/area-we-serve/al-jaffiliya"
+  },
+  {
+    "name": "Zabeel",
+    "href": "/dubai/area-we-serve/zabeel"
+  },
+  {
+    "name": "Al Fahidi",
+    "href": "/dubai/area-we-serve/al-fahidi"
+  },
+  {
+    "name": "Al Raffa",
+    "href": "/dubai/area-we-serve/al-raffa"
+  },
+  {
+    "name": "Al Mina",
+    "href": "/dubai/area-we-serve/al-mina"
+  },
+  {
+    "name": "Al Hudaiba",
+    "href": "/dubai/area-we-serve/al-hudaiba"
+  },
+  {
+    "name": "Al Jaddaf",
+    "href": "/dubai/area-we-serve/al-jaddaf"
+  }
+],
   operatingHours: [
     { day: "Saturday", hours: "24 Hours" },
     { day: "Sunday", hours: "24 Hours" },
@@ -38,59 +68,59 @@ export const SiteConfig = {
   services: [
     {
       name: "Car Battery Replacement",
-      slug: "car-battery-replacement-dubai"
+      slug: "/dubai/services/car-battery-replacement-dubai"
     },
     {
       name: "Car AC Repair",
-      slug: "car-ac-repair-dubai"
+      slug: "/dubai/services/car-ac-repair-dubai"
     },
     {
       name: "Car Engine Oil Change",
-      slug: "car-engine-oil-change-dubai"
+      slug: "/dubai/services/car-engine-oil-change-dubai"
     },
     {
       name: "Car Gear Oil Change",
-      slug: "car-gear-oil-change-dubai"
+      slug: "/dubai/services/car-gear-oil-change-dubai"
     },
     {
       name: "Car Brake Pad Repair",
-      slug: "car-brake-pad-repair-and-replacement-dubai"
+      slug: "/dubai/services/car-brake-pad-repair-and-replacement-dubai"
     },
     {
       name: "Car Radiator Repair",
-      slug: "car-radiator-repair-and-replacement-dubai"
+      slug: "/dubai/services/car-radiator-repair-and-replacement-dubai"
     },
     {
       name: "ABS System Repair",
-      slug: "abs-system-repair-dubai"
+      slug: "/dubai/services/abs-system-repair-dubai"
     },
     {
       name: "Car Maintenance",
-      slug: "car-maintenance-dubai"
+      slug: "/dubai/services/car-maintenance-dubai"
     },
     {
       name: "Car Detailing",
-      slug: "denamocraft-tailored-car-transformation-dubai"
+      slug: "/dubai/services/denamocraft-tailored-car-transformation-dubai"
     },
     {
       name: "Car AC Gas Refill",
-      slug: "car-ac-gas-fill-dubai"
+      slug: "/dubai/services/car-ac-gas-fill-dubai"
     }
   ],
 
   navItems: [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Areas We Serve", href: "/area-we-serve" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    { name: "Services", href: "/dubai/services" },
+    { name: "Areas We Serve", href: "/dubai/area-we-serve" },
+    { name: "About", href: "/dubai/about" },
+    { name: "Contact", href: "/dubai/contact" },
+    { name: "Blog", href: "/dubai/blog" },
   ],
   footerhrefs: [
-    { title: "About Us", href: "/about" },
-    { title: "Contact", href: "/contact" },
-    { title: "Blog", href: "/blog" },
-    { title: "Privacy Policy", href: "/privacy" },
+    { title: "About Us", href: "/dubai/about" },
+    { title: "Contact", href: "/dubai/contact" },
+    { title: "Blog", href: "/dubai/blog" },
+    { title: "Privacy Policy", href: "/dubai/privacy" },
     { title: "Sitemap", href: "/sitemap.xml" }
   ],
 
