@@ -38,8 +38,6 @@ export default function RootLayout({ children }) {
           {children}
           <SpeedInsights/>
           <Analytics />
-          {/* <FloatingButtons /> */}
-          {/* <MobileBottomNav /> */}
           <FloatingButtons/>
           <Footer />
         </div>

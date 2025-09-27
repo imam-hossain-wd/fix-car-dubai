@@ -20,6 +20,7 @@ import gareOilChange from '../assets/services/car-gear-oil-change-service-al-kar
 import carMaintenance from '../assets/services/car-maintenance-service-al-karama-dubai-uae.jpg';
 import carRaditor from '../assets/services/car-radiator-repair-service-al-karama-dubai-uae.jpg';
 import absSystemRepair from '../assets/services/abs-system-repair-service-al-karama-dubai-uae.jpg';
+import serviceareabanner from '../assets/images/service-areas-home-banner.jpg';
 
 import cadillac from '../assets/brand/American/cadillac-icon.jpg';
 import chevrolet from '../assets/brand/American/chevrolet-icon.jpg';
@@ -60,6 +61,10 @@ import maserati from '../assets/brand/others/maserati-icon.jpg';
 import skoda from '../assets/brand/others/skoda-icon.jpg';
 
 
+
+export const serviceAreasBanner = {
+    serviceareabanner
+}
 
 export const brandsImages = {
     americanbrands: {

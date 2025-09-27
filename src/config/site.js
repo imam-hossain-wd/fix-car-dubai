@@ -12,68 +12,68 @@ export const SiteConfig = {
   whatsappCallLink: "https://wa.me/971568703512",
   location: "Al Karama, Dubai - UAE",
   coordinate: "25.2485261,55.3034075",
-serviceAreas: [
-  {
-    "name": "Al Karama",
-    "href": "/dubai/area-we-serve/al-karama",
-    "title": "Best Car Repair in Al Karama",
-    "slug": "al-karama"
-  },
-  {
-    "name": "Oud Metha",
-    "href": "/dubai/area-we-serve/oud-metha",
-    "title": "Best Car Repair in Oud Metha",
-    "slug": "oud-metha"
-  },
-  {
-    "name": "Al Hamriya",
-    "href": "/dubai/area-we-serve/al-hamriya",
-    "title": "Best Car Repair in Al Hamriya",
-    "slug": "al-hamriya"
-  },
-  {
-    "name": "Al Jaffiliya",
-    "href": "/dubai/area-we-serve/al-jaffiliya",
-    "title": "Best Car Repair in Al Jaffiliya",
-    "slug": "al-jaffiliya"
-  },
-  {
-    "name": "Zabeel",
-    "href": "/dubai/area-we-serve/zabeel",
-    "title": "Best Car Repair in Zabeel",
-    "slug": "zabeel"
-  },
-  {
-    "name": "Al Fahidi",
-    "href": "/dubai/area-we-serve/al-fahidi",
-    "title": "Best Car Repair in Al Fahidi",
-    "slug": "al-fahidi"
-  },
-  {
-    "name": "Al Raffa",
-    "href": "/dubai/area-we-serve/al-raffa",
-    "title": "Best Car Repair in Al Raffa",
-    "slug": "al-raffa"
-  },
-  {
-    "name": "Al Mina",
-    "href": "/dubai/area-we-serve/al-mina",
-    "title": "Best Car Repair in Al Mina",
-    "slug": "al-mina"
-  },
-  {
-    "name": "Al Hudaiba",
-    "href": "/dubai/area-we-serve/al-hudaiba",
-    "title": "Best Car Repair in Al Hudaiba",
-    "slug": "al-hudaiba"
-  },
-  {
-    "name": "Al Jaddaf",
-    "href": "/dubai/area-we-serve/al-jaddaf",
-    "title": "Best Car Repair in Al Jaddaf",
-    "slug": "al-jaddaf"
-  }
-],
+  serviceAreas: [
+    {
+      "name": "Al Karama",
+      "href": "/dubai/area-we-serve/al-karama",
+      "title": "Best Car Repair in Al Karama",
+      "slug": "al-karama"
+    },
+    {
+      "name": "Oud Metha",
+      "href": "/dubai/area-we-serve/oud-metha",
+      "title": "Best Car Repair in Oud Metha",
+      "slug": "oud-metha"
+    },
+    {
+      "name": "Al Hamriya",
+      "href": "/dubai/area-we-serve/al-hamriya",
+      "title": "Best Car Repair in Al Hamriya",
+      "slug": "al-hamriya"
+    },
+    {
+      "name": "Al Jaffiliya",
+      "href": "/dubai/area-we-serve/al-jaffiliya",
+      "title": "Best Car Repair in Al Jaffiliya",
+      "slug": "al-jaffiliya"
+    },
+    {
+      "name": "Zabeel",
+      "href": "/dubai/area-we-serve/zabeel",
+      "title": "Best Car Repair in Zabeel",
+      "slug": "zabeel"
+    },
+    {
+      "name": "Al Fahidi",
+      "href": "/dubai/area-we-serve/al-fahidi",
+      "title": "Best Car Repair in Al Fahidi",
+      "slug": "al-fahidi"
+    },
+    {
+      "name": "Al Raffa",
+      "href": "/dubai/area-we-serve/al-raffa",
+      "title": "Best Car Repair in Al Raffa",
+      "slug": "al-raffa"
+    },
+    {
+      "name": "Al Mina",
+      "href": "/dubai/area-we-serve/al-mina",
+      "title": "Best Car Repair in Al Mina",
+      "slug": "al-mina"
+    },
+    {
+      "name": "Al Hudaiba",
+      "href": "/dubai/area-we-serve/al-hudaiba",
+      "title": "Best Car Repair in Al Hudaiba",
+      "slug": "al-hudaiba"
+    },
+    {
+      "name": "Al Jaddaf",
+      "href": "/dubai/area-we-serve/al-jaddaf",
+      "title": "Best Car Repair in Al Jaddaf",
+      "slug": "al-jaddaf"
+    }
+  ],
   operatingHours: [
     { day: "Saturday", hours: "24 Hours" },
     { day: "Sunday", hours: "24 Hours" },
@@ -158,5 +158,5 @@ serviceAreas: [
 }
 
 const {
-  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, whatsappNumber, callNumber,operatingHours, displayNumber, description, email, url, brandName, authorName
+  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink,whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
 } = SiteConfig;

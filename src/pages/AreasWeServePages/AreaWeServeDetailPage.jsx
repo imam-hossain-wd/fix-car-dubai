@@ -1,3 +1,4 @@
+import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
 import BrandsWeService from "../../components/view/BrandsWeServe/BrandsWeServe";
 import { FAQSection } from "../../components/view/FAQSection/FAQSection";
 import FeaturedServices from "../../components/view/FeaturedServices/FeaturedServices";
@@ -9,26 +10,26 @@ import { WhoWeAre } from "../../components/view/WhoWeAre/WhoWeAre";
 import WhyChooseUs from "../../components/view/WhyChooseUs/WhyChooseUs";
 import BlogCarousel from "../BlogPage/BlogCarousel";
 
-export default function AreaWeServeDetailPage({area}) {
+export default function AreaWeServeDetailPage({ area }) {
+
+
   return (
     <div>
-        <div>{area.title}</div>
+      <ServiceAreaHomeBanner area={area} />
+      {/* <FeaturedServices /> */}
 
-              <HomeBanner />
-                    {/* <FeaturedServices /> */}
-        
-                    <FeaturedServices />
-                    <WhoWeAre />
-                    <WhyChooseUs />
-                    <BrandsWeService />
-                    {/* <WhyChooseUs /> */}
-                    {/* <TrustedByDubai /> */}
-                    <TrustedService />
-                    <Reviews />
-                    {/* <BookAppointmentForm /> */}
-                    <BlogCarousel />
-                    <GetTouch />
-                    <FAQSection />
+      <FeaturedServices />
+      <WhoWeAre />
+      <WhyChooseUs />
+      <BrandsWeService />
+      {/* <WhyChooseUs /> */}
+      {/* <TrustedByDubai /> */}
+      <TrustedService />
+      <Reviews />
+      {/* <BookAppointmentForm /> */}
+      <BlogCarousel />
+      <GetTouch />
+      <FAQSection />
     </div>
   )
 }

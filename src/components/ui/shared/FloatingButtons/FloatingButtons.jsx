@@ -30,7 +30,7 @@ export function FloatingButtons() {
   };
 
   return (
-    <div className="fixed bottom-16 right-6 z-50 md:hidden">
+    <div className="fixed bottom-16 right-6 z-50">
       {/* Social Media Icons (Vertical) */}
       <div className="flex flex-col items-center gap-3 mb-20">
         <Link

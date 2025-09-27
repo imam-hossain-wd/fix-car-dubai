@@ -6,8 +6,21 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
 import Image from 'next/image'
+import Link from 'next/link'
+import { SiteConfig } from '@/config/site'
+
+
+
 
 export default function HomeBanner() {
+
+
+  const {
+    numberCallLink, displayNumber
+  } = SiteConfig;
+
+
+
   const bannerSlides = [
     {
       id: 1,
@@ -16,7 +29,7 @@ export default function HomeBanner() {
       description: "We provide top-quality service for all car makes and models with a 12-month warranty on all repairs.",
       image: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?_gl=1*w1tjmz*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3NzMkajE5JGwwJGgw",
       ctaText: "Book Appointment",
-      ctaLink: "/booking"
+      ctaLink: "/dubai/book-appointment"
     },
     {
       id: 2,
@@ -24,8 +37,8 @@ export default function HomeBanner() {
       subtitle: "20% Off All Brake Services This Month",
       description: "Ensure your safety on the road with our professional brake inspection and repair services.",
       image: "https://images.pexels.com/photos/4116230/pexels-photo-4116230.jpeg?_gl=1*1mrv04*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3NTMkajM5JGwwJGgw",
-      ctaText: "View Specials",
-      ctaLink: "/specials"
+      ctaText: "View Services",
+      ctaLink: "/services"
     },
     {
       id: 3,
@@ -33,10 +46,12 @@ export default function HomeBanner() {
       subtitle: "Fast response times across the city",
       description: "Broken down? Our team will come to you quickly and get you back on the road.",
       image: "https://images.pexels.com/photos/4489704/pexels-photo-4489704.jpeg?_gl=1*tohyt1*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3OTgkajYwJGwwJGgw",
-      ctaText: "Call Now: (555) 123-4567",
-      ctaLink: "tel:5551234567"
+      ctaText: `Call Now: ${displayNumber}`,
+      ctaLink: numberCallLink
     }
-  ]
+  ];
+
+
 
   return (
     <div className="relative w-full h-screen max-h-[500px]">
@@ -61,7 +76,7 @@ export default function HomeBanner() {
       >
         {bannerSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-[90%]">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
               <Image
@@ -71,7 +86,7 @@ export default function HomeBanner() {
                 className="object-cover"
                 priority
               />
-              
+
               {/* Content */}
               <div className="relative z-20 flex items-center justify-center h-full px-4">
                 <div className="max-w-4xl mx-auto text-center text-white">
@@ -85,12 +100,12 @@ export default function HomeBanner() {
                     {slide.description}
                   </p>
                   <div className="animate-fade-in-delay-3">
-                    <a
+                    <Link
                       href={slide.ctaLink}
-                      className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                       {slide.ctaText}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -100,7 +115,7 @@ export default function HomeBanner() {
       </Swiper>
 
       {/* Custom navigation arrows */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-12">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-12">
         <button className="home-banner-prev bg-slate-900/50 hover:bg-slate-900/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-amber-500 transition-all duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -111,7 +126,7 @@ export default function HomeBanner() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }

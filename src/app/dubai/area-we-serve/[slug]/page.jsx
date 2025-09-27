@@ -3,21 +3,22 @@
 import { SiteConfig } from '../../../../config/site';
 import AreaWeServeDetailPage from '../../../../pages/AreasWeServePages/AreaWeServeDetailPage';
 
-const {serviceAreas
-} = SiteConfig;
-
 
 export default async function AreaWeServeDetail({ params }) {
-const slug = await params?.slug;
+
+  const { serviceAreas
+  } = SiteConfig;
+
+  const { slug } = await params
 
   const area = serviceAreas.find(
     (s) => s.slug === slug
-  ) 
+  )
 
-    if (!area) {
+  if (!area) {
     return notFound()
   }
 
- return <AreaWeServeDetailPage area={area} />
+  return <AreaWeServeDetailPage area={area} />
 }
 

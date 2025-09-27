@@ -1,5 +1,5 @@
 
-import productsData from '../../../data/productData.json';
+import productsData from '../../../../data/productData.json';
 import ProductDetailsPage from '@/pages/ProductPage/ProductDetailsPage'
 
 
