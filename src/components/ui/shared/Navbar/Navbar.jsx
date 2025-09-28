@@ -92,7 +92,7 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-         <Link href="/book-appointment">
+         <Link href="/dubai/book-appointment">
           <Button className="text-xs -py-3">
              <Calendar className="h-4 w-4 text-white group-hover/action:text-white" />
               Book Now

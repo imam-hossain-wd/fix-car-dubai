@@ -11,9 +11,14 @@ export default async function AreaWeServeDetail({ params }) {
 
   const { slug } = await params
 
+   if (!slug) {
+    return notFound()
+  }
+
   const area = serviceAreas.find(
     (s) => s.slug === slug
   )
+
 
   if (!area) {
     return notFound()

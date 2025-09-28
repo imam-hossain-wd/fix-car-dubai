@@ -143,7 +143,7 @@ export const ServiceCard = ({ service }) => {
 
           {/* Booking Button */}
           <Link
-            href="/booking"
+            href="/dubai/book-appointment"
             className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
             title="Book Now"
           >

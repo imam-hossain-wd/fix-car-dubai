@@ -32,15 +32,7 @@ export default function BookAppointmentPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Form Section */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-amber-100">
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                  Appointment Details
-                </h2>
-                <p className="text-gray-500">
-                  Please provide your information and preferred service time
-                </p>
-              </div>
+            <div className="bg-white rounded-2xl shadow-lg p-2 border border-amber-100">
               <BookAppointmentForm />
             </div>
           </div>

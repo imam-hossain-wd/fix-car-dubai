@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function BlogCarousel() {
   return (
-    <div className='container mx-auto'>
+    <div className='w-[90%] mx-auto'>
 
       <div className="mx-auto text-center py-10 mb-10 bg-amber-50">
         <div className="inline-flex items-center justify-center mb-4">

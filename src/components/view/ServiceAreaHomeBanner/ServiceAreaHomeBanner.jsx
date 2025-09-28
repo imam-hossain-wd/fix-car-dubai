@@ -68,7 +68,7 @@ export function ServiceAreaHomeBanner({ area }) {
     }
   };
 
-  const areaData = areaFeatures[area.slug] || {
+  const areaData = areaFeatures[area?.slug] || {
     highlight: "Dubai's Trusted Service",
     description: "Professional mobile car service across Dubai",
     responseTime: "30 min"
@@ -80,7 +80,7 @@ export function ServiceAreaHomeBanner({ area }) {
       <div className="absolute inset-0 z-0">
         <Image
           src={backgroundImage}
-          alt={`Car service in ${area.name}, Dubai`}
+          alt={`Car service in ${area?.name}, Dubai`}
           fill
           className="object-cover"
           priority
@@ -106,19 +106,19 @@ export function ServiceAreaHomeBanner({ area }) {
               <ArrowRight className="w-3 h-3" />
               <span className="hover:text-amber-300 transition-colors">Areas We Serve</span>
               <ArrowRight className="w-3 h-3" />
-              <span className="text-amber-300 font-medium">{area.name}</span>
+              <span className="text-amber-300 font-medium">{area?.name}</span>
             </div>
 
             {/* Area Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-lg px-4 py-3 rounded-full border border-white/30 shadow-lg">
               <MapPin className="w-5 h-5 text-amber-300" />
-              <span className="text-base font-semibold">Serving {area.name}</span>
+              <span className="text-base font-semibold">Serving {area?.name}</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Premium Car Service in{" "}
-              <span className="text-amber-300 drop-shadow-lg">{area.name}</span>
+              <span className="text-amber-300 drop-shadow-lg">{area?.name}</span>
             </h1>
 
             {/* Highlight Feature */}
@@ -132,7 +132,7 @@ export function ServiceAreaHomeBanner({ area }) {
             {/* Description */}
             <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
               {areaData.description}. Experience top-quality auto repair services 
-              delivered directly to your location in {area.name} with guaranteed 
+              delivered directly to your location in {area?.name} with guaranteed 
               satisfaction and rapid response times.
             </p>
 
@@ -159,7 +159,7 @@ export function ServiceAreaHomeBanner({ area }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all">
                 <Clock className="w-5 h-5 mr-2" />
-                Book Service in {area.name}
+                Book Service in {area?.name}
               </Button>
               <Button variant="outline" className="bg-transparent hover:bg-white/10 text-white border-white/40 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm">
                 <Phone className="w-5 h-5 mr-2" />
@@ -191,7 +191,7 @@ export function ServiceAreaHomeBanner({ area }) {
               <div className="text-center space-y-6">
                 <div className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full border border-amber-400/30">
                   <MapPin className="w-4 h-4" />
-                  <span className="font-semibold">{area.name} Coverage Map</span>
+                  <span className="font-semibold">{area?.name} Coverage Map</span>
                 </div>
                 
                 <h3 className="text-2xl font-bold text-white mb-4">
