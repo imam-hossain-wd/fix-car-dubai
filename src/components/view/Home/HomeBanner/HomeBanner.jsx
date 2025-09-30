@@ -38,7 +38,7 @@ export default function HomeBanner() {
       description: "Ensure your safety on the road with our professional brake inspection and repair services.",
       image: "https://images.pexels.com/photos/4116230/pexels-photo-4116230.jpeg?_gl=1*1mrv04*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3NTMkajM5JGwwJGgw",
       ctaText: "View Services",
-      ctaLink: "/services"
+      ctaLink: "/dubai/services"
     },
     {
       id: 3,

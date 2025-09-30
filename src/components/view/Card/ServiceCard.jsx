@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Wrench, Droplet, Fan, Battery, Settings, Clock, Shield, Award, Zap, Phone, MessageCircle, Calendar } from "lucide-react";
 import { useState } from "react";
+import { SiteConfig } from "@/config/site";
 
 // Service icon mapping
 const serviceIcons = {
@@ -33,6 +34,12 @@ const getServiceIcon = (title) => {
 // Style 4: Bold Card with Geometric Elements (with image)
 export const ServiceCard = ({ service }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+
+  const {
+    contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink,whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
+  } = SiteConfig;
+  
 
   return (
     <div 
@@ -115,7 +122,7 @@ export const ServiceCard = ({ service }) => {
         <div className="flex items-center justify-center gap-3 pt-3 border-t border-gray-100">
           {/* Call Button */}
           <Link
-            href="tel:+971506695990"
+            href={numberCallLink}
             className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
             title="Call Now"
           >
@@ -129,7 +136,7 @@ export const ServiceCard = ({ service }) => {
 
           {/* WhatsApp Button */}
           <Link
-            href="https://wa.me/971506695990"
+            href={whatsappCallLink}
             className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
             title="WhatsApp"
           >

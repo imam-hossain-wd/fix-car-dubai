@@ -20,6 +20,7 @@ import { Badge } from '@/components/ui/badge'
 import { SiteConfig } from '@/config/site'
 import Image from 'next/image'
 import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb'
+import Link from 'next/link'
 
 function ServiceDetailsPage({ service }) {
   const getServiceIcon = React.useCallback(() => {
@@ -140,9 +141,11 @@ function ServiceDetailsPage({ service }) {
                 </li>
               </ul>
 
+             <Link href="/dubai/book-appointment">
               <Button className="mt-6 w-full" size="lg">
                 Book Now
               </Button>
+             </Link>
             </div>
           </div>
         </Card>

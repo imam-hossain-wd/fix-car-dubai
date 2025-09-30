@@ -12,18 +12,11 @@ export const ServiceAreas = () => {
 
     return (
         <section className="bg-gradient-to-b from-white via-gray-50 to-white py-2">
-            <div className="container mx-auto px-4 max-w-6xl">
-                {/* Header Section */}
-                <div className="text-center mb-2">
-                    <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                        24/7 Service Coverage
-                    </span>
-                </div>
-
+            <div className="container mx-auto  max-w-6xl">
                 <div className="flex flex-col lg:flex-row gap-4">
                     {/* Service Areas Grid */}
                     <div className="flex-1">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
                             {serviceAreas.map((area, index) => (
                                 <ServiceAreaCard key={index} area={area} city={city} />
                             ))}

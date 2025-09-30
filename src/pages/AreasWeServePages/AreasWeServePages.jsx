@@ -4,6 +4,7 @@ import { ServiceAreas } from "@/components/view/ServiceArea/ServiceAreas";
 import { ServicesShowcase } from "@/components/view/ServicesShowcase/ServicesShowcase";
 import { SiteConfig } from "@/config/site";
 import { Phone, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 
 export default function AreasWeServePages() {
@@ -15,7 +16,7 @@ export default function AreasWeServePages() {
 
 
   const {
-    phoneNumber,
+    displayNumber,
     phoneAction,
     whatsappCall,
   } = SiteConfig;
@@ -58,13 +59,13 @@ export default function AreasWeServePages() {
       </section>
 
       {/* Service Areas Component */}
-      <section className="py-6">
+      <section className="py-4">
         <div className="container mx-auto px-4">
           <ServiceAreas />
         </div>
       </section>
 
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="">
           <ServicesShowcase />
         </div>
@@ -77,25 +78,23 @@ export default function AreasWeServePages() {
       <div className="text-center  w-full border p-6 bg-gradient-to-r from-primary/10 to-primary/5 ">
         <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-3">Need Immediate Assistance?</h3>
         <p className="text-gray-600 mb-4">Our team is available 24/7 to help with your car repair needs</p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
-          <a
+        <div className="flex  items-center sm:flex-row gap-4 mt-5 justify-center ">
+          <Link
             href={`tel:${phoneAction}`}
-            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium"
+            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors font-medium text-center"
           >
             <Phone className="w-5 h-5" />
-            Call Now: {phoneNumber}
-          </a>
-          <a
+            Call Now
+          </Link>
+          <Link
             href={`https://wa.me/${whatsappCall}`}
-            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors font-medium"
+            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors font-medium"
           >
             <MessageCircle className="w-5 h-5" />
             WhatsApp Us
-          </a>
+          </Link>
         </div>
       </div>
-
-
     </main>
   );
 }

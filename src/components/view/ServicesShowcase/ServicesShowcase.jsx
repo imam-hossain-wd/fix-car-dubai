@@ -6,10 +6,10 @@ import { SiteConfig } from "@/config/site";
 
 export function ServicesShowcase() {
   
-    const {serviceAreas
+    const {services
     } = SiteConfig;
     
-    const displayedServices = serviceAreas.slice(0, 8);
+    const displayedServices = services.slice(0, 8);
 
     const serviceIcons = {
         "Car Battery Replacement": "⚡",

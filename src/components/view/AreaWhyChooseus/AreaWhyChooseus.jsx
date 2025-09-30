@@ -42,7 +42,7 @@ export function AreaWhyChooseUs() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-8 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* SEO Optimized Header */}
         <div className="text-center mb-12">
