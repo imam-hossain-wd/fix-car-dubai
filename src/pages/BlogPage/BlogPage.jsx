@@ -118,7 +118,7 @@ export const BlogCard = ({ blog }) => {
       <div className="p-6">
         {/* Title */}
         <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-          <Link href={`/blog/${blog.slug}`}>
+          <Link href={`/dubai/blog/${blog.slug}`}>
             {blog.title}
           </Link>
         </h2>
@@ -145,7 +145,7 @@ export const BlogCard = ({ blog }) => {
         {/* Action Buttons */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
           <Link
-            href={`/blog/${blog.slug}`}
+            href={`/dubai/blog/${blog.slug}`}
             className="flex items-center gap-2 text-primary font-medium hover:text-green-700 transition-colors group/readmore"
           >
             Read More

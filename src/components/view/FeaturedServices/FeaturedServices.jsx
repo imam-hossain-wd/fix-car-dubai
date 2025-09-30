@@ -35,7 +35,7 @@ export default function FeaturedServices() {
         {/* CTA section */}
         <div className="text-center mt-8">
           <Button size="lg" className="rounded-full gap-2" asChild>
-            <Link href="/services">
+            <Link href="/dubai/services">
               View All Services
               <ArrowRight className="h-5 w-5" />
             </Link>

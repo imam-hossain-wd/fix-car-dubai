@@ -13,10 +13,10 @@ import FeaturedServices from '@/components/view/FeaturedServices/FeaturedService
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import BookAppointmentForm from '@/components/Forms/AppointmentForm'
-import { TrustedByDubai, TrustedService} from '@/components/view/TrustedService/TrustedService'
-import BlogCarousel from '../BlogPage/BlogCarousel'
+import { TrustedByDubai, TrustedService } from '@/components/view/TrustedService/TrustedService'
 import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
 import BrandsWeService from '@/components/view/BrandsWeServe/BrandsWeServe'
+import BlogCarousel from '@/components/view/BlogCarousel/BlogCarousel'
 
 // import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
 

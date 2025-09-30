@@ -8,7 +8,7 @@ import Reviews from "../../components/view/Reviews/Reviews";
 import { TrustedService } from "../../components/view/TrustedService/TrustedService";
 import { WhoWeAre } from "../../components/view/WhoWeAre/WhoWeAre";
 import WhyChooseUs from "../../components/view/WhyChooseUs/WhyChooseUs";
-import BlogCarousel from "../BlogPage/BlogCarousel";
+import BlogCarousel from "../../components/view/BlogCarousel/BlogCarousel";
 
 export default function AreaWeServeDetailPage({ area }) {
 
