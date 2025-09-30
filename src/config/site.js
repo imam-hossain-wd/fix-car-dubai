@@ -30,7 +30,7 @@ export const SiteConfig = {
       "href": "/dubai/area-we-serve/al-hamriya",
       "title": "Best Car Repair in Al Hamriya",
       "slug": "al-hamriya"
-    },
+    }, 
     {
       "name": "Al Jaffiliya",
       "href": "/dubai/area-we-serve/al-jaffiliya",

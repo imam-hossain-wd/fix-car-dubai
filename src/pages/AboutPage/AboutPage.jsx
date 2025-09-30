@@ -36,24 +36,6 @@ export default function AboutPage() {
           <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Dubai's Premier 24/7 Mobile Car Service</h1>
-        <p className="text-sm sm:text-base text-gray-600 max-w-xs sm:max-w-md mx-auto mb-2">
-          Immediate response ∙ Certified technicians ∙ Transparent pricing
-        </p>
-
-        <div className="mt-3 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1.5 text-xs sm:text-sm text-gray-600">
-          <div className="flex items-center">
-            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-emerald-200" />
-            <span>100+ Certified Techs</span>
-          </div>
-          <div className="flex items-center">
-            <CheckCircle className="w-3 h-3 sm:w-4 sm:w-4 mr-1 text-emerald-200" />
-            <span>12-Month Warranty</span>
-          </div>
-          <div className="flex items-center">
-            <CheckCircle className="w-3 h-3 sm:w-4 sm:w-4 mr-1 text-emerald-200" />
-            <span>90% Same-Day</span>
-          </div>
-        </div>
       </div>
 
 
@@ -78,7 +60,7 @@ export default function AboutPage() {
             From emergency repairs to routine maintenance, our dedicated team is here to help 24/7.
           </p>
           <a
-            href="/book-service"
+            href="/dubai/book-appointment"
             className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-xl hover:bg-primary/90 transition"
           >
             Book a Service Now

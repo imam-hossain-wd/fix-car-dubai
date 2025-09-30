@@ -41,32 +41,45 @@ const MapComponent = () => {
           {/* Contact Card */}
           <div className="bg-gradient-to-br from-gray-900 to-primary rounded-2xl p-6 text-white shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              {/* <div className="p-1 bg-white/20 rounded-xl w-24 h-24"> */}
-                {/* <Car className="w-6 h-6" /> */}
-                {/* <Link href="/" className="flex-1 md:flex-none -ml-8 md:-ml-0"> */}
-                  <Image className='w-40 h-40 -m-12 ' src={bandlogo.carfixdubailogo} width={80} height={80} quality={100} alt="car fix dubai logo" />
-                {/* </Link> */}
-              {/* </div> */}
+              <Image
+                className='w-40 h-40 -m-12'
+                src={bandlogo.carfixdubailogo}
+                width={80}
+                height={80}
+                quality={100}
+                alt="car fix dubai logo"
+              />
               <div className='flex flex-col'>
-                <h3 className=" font-bold ">{location}</h3>
-              <p className="text-white/80 text-sm">24/7 Emergency Service</p>
+                <h3 className="font-bold">{location}</h3>
+                <p className="text-white/80 text-sm">24/7 Emergency Service</p>
               </div>
-              {/* <h3 className="text-xl font-bold text-primary">Fix Car Dubai</h3> */}
             </div>
 
             <div className="space-y-4">
-              {/* Address */}
-              {/* <div className="flex items-start gap-4">
+              {/* Service Areas */}
+              <div className="flex items-start gap-4">
                 <div className="p-2 bg-white/20 rounded-lg mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Our Location</h4>
-                  <p className="text-white/80 text-sm mt-1">{location}</p>
+                <div className="flex-1">
+                  <h4 className="font-semibold mb-2">Service Areas</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      "Al Karama", "Oud Metha", "Al Jaffiliya", "Zabeel", "Al Fahidi", "Al Raffa", "Al Mina", "Al Hudaiba", "Al Jaddaf", "Al Hamriya"
+                    ].map((area, index) => (
+                      <span
+                        key={index}
+                        className="inline-block bg-white/10 text-white/90 px-2 py-1 rounded text-xs font-medium hover:bg-white/20 transition-colors cursor-default"
+                        title={area}
+                      >
+                        {area}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div> */}
+              </div>
 
-              {/* Phone */}
+
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-white/20 rounded-lg mt-0.5">
                   <Phone className="w-5 h-5" />
@@ -82,7 +95,6 @@ const MapComponent = () => {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-white/20 rounded-lg mt-0.5">
                   <Mail className="w-5 h-5" />
@@ -98,61 +110,28 @@ const MapComponent = () => {
                 </div>
               </div>
 
-              {/* Hours */}
-              {/* <div className="flex items-start gap-4">
-                <div className="p-2 bg-white/20 rounded-lg mt-0.5">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Working Hours</h4>
-                  <p className="text-white/80 text-sm mt-1">24/7 Emergency Service</p>
-                </div>
-              </div> */}
+
+
             </div>
           </div>
 
           {/* Quick Action Buttons */}
           <div className="space-y-3">
-            <a
-              href={`tel:${phoneAction}`}
-              className="flex items-center justify-between p-4 bg-primary hover:bg-primary/90 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-white/20 rounded-full">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <span className="font-medium">Emergency Call</span>
-              </div>
-              <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-            </a>
 
-            <a
-              href={`https://wa.me/${whatsappCall}`}
-              className="flex items-center justify-between p-4 bg-green-600 hover:bg-green-700 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-white/20 rounded-full">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                <span className="font-medium">WhatsApp Chat</span>
-              </div>
-              <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-            </a>
-
-            <a
+            <Link
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group"
+              className="flex items-center justify-between p-4 bg-primary hover:bg-primary/90 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group -mt-3"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-white/20 rounded-full">
+                <div className="p-2 bg-black/20 rounded-full">
                   <Navigation className="w-5 h-5" />
                 </div>
                 <span className="font-medium">Open in Maps</span>
               </div>
               <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
 
