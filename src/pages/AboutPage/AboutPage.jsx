@@ -1,8 +1,7 @@
 import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
 import { TrustedService } from "@/components/view/TrustedService/TrustedService";
 import { WhoWeAre } from "@/components/view/WhoWeAre/WhoWeAre";
-import { CheckCircle} from "lucide-react";
-import Head from "next/head";
+
 
 export default function AboutPage() {
 
@@ -12,16 +11,8 @@ export default function AboutPage() {
   ]
 
 
-
   return (
     <>
-      <Head>
-        <title>About Us | 24CarServiceDubai</title>
-        <meta
-          name="description"
-          content="Learn more about 24CarServiceDubai – your trusted partner for automotive care in Dubai. Meet our team, understand our mission, and explore our award-winning services."
-        />
-      </Head>
 
       {/* Hero Section */}
 

@@ -1,35 +1,18 @@
 
 import GetTouch from '@/components/view/GetTouch/GetTouch'
-import { getContactPageSchema } from '@/schemas/contactPageSchema'
-import { SeoHead } from '@/seo/SeoHead'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
 import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb'
 
 
 export default function ContactPage() {
-  const pageTitle = "Contact 24 Car Service Dubai | 24/7 Car Help";
-  const pageDescription = "Need urgent car help in Dubai? Contact 24 Car Service Dubai anytime for 24/7 on-demand car repair, battery replacement, and roadside assistance. Call or WhatsApp now!";
-  const pageKeywords = "contact car repair Dubai, mobile mechanic phone number, 24/7 roadside assistance, emergency car service contact Dubai";
-  const pageCanonical = "https://24CarServiceDubai.com/contact";
-
-  const contactPageSchema = getContactPageSchema();
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Contact', href: '/contact' }
   ]
 
-
   return (
     <div>
-      <SeoHead
-        title={pageTitle}
-        description={pageDescription}
-        keywords={pageKeywords}
-        canonicalUrl={pageCanonical}
-        schema={contactPageSchema}
-      />
-
       <div className="px-4 mx-auto bg-secondary/90 border-b">
         <Breadcrumb items={breadcrumbItems} />
       </div>

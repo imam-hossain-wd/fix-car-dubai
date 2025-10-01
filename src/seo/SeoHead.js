@@ -16,7 +16,7 @@ export const SeoHead = ({
       {/* Meta Description */}
       {description && (
         <meta name="description" content={description} />
-      )}
+      )} 
 
       {/* Meta Keywords (Optional, less impact on Google SEO but can be useful) */}
       {keywords && (

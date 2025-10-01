@@ -163,31 +163,6 @@ export const ServiceCard = ({ service }) => {
           </Link>
         </div>
         </div>
-{/* ---------------------------------------------------------------- */}
-        {/* Quick action icons */}
- 
-{/* //------------------------------------ */}
-        {/* Alternative: Horizontal quick actions that appear on hover */}
-        {/* <div className={`flex justify-center gap-2 mt-3 transition-all duration-300  'opacity-100' : 'opacity-0 h-0'}`}>
-          <Button variant="outline" size="sm" className="rounded-full px-3 text-xs gap-1" asChild>
-            <Link href="tel:+971506695990">
-              <Phone className="h-3 w-3" />
-              Call
-            </Link>
-          </Button>
-          <Button variant="outline" size="sm" className="rounded-full px-3 text-xs gap-1 border-green-300 text-green-600 hover:bg-green-50" asChild>
-            <Link href="https://wa.me/971506695990">
-              <MessageCircle className="h-3 w-3" />
-              WhatsApp
-            </Link>
-          </Button>
-          <Button size="sm" className="rounded-full px-3 text-xs gap-1 bg-primary hover:bg-primary/90" asChild>
-            <Link href="/booking">
-              <Calendar className="h-3 w-3" />
-              Book Now
-            </Link>
-          </Button>
-        </div> */}
       </div>
 
       {/* Border effect on hover */}

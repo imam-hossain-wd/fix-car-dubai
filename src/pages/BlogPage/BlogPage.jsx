@@ -1,14 +1,16 @@
 
 'use client'
 import Head from 'next/head';
-import { Calendar, User, Clock, ArrowRight, Share2, BookOpen, Snowflake, Battery, Settings, Wrench, 
+import { User, Clock, ArrowRight, Share2, Snowflake, Battery, Settings, Wrench, 
   Disc, Droplet, Circle, Zap  } from 'lucide-react';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogdata } from '@/data/blogdata';
 import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb';
-import { CategoryCard } from '@/components/view/Card/CategoryCard';
+import { SiteConfig } from '@/config/site';
+
+
 
 // Reusable Blog Card Component
 export const BlogCard = ({ blog }) => {

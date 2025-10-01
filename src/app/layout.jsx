@@ -7,6 +7,7 @@ import "./globals.css";
 import { Footer } from "@/components/ui/shared/Footer/Footer";
 import { Navbar } from "@/components/ui/shared/Navbar/Navbar";
 import { FloatingButtons } from "@/components/ui/shared/FloatingButtons/FloatingButtons";
+import GoogleAnalytics from "@/seo/GoogleAnalytics";
 
 
 const geistSans = Geist({
@@ -19,13 +20,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Best Car Repair and Services in Dubai || 24 Car Service Dubai",
-  description: "One of the best car repair and servicing company in dubai || 24 Car Service Dubai",
-  verification: {
-    google: "0EZ3v7hLpAZDBl4powBmsZpjU6-masTneZBr6-Q8G3g"
-  }
-};
+
+// export const metadata = {
+//   title: "Fix Car Dubai | 24/7 Mobile Car Repair & Battery Replacement in Dubai",
+//   description: "Fix Car Dubai provides professional car repair, servicing, battery replacement, AC repair, oil change, and detailing services across Dubai. 24/7 mobile service to your home, office, or roadside.",
+//   verification: {
+//     google: "6ZILuBDzgWNdHqeSTWIMSTG8ZbnR19Gw-8hG90gFFlQ"
+//   },
+//   alternates: {
+//     canonical: SiteConfig.url,
+//   },
+//   icons: {
+//     icon: "/favicon.ico",
+//     shortcut: "/favicon.ico",
+//     apple: "/apple-touch-icon.png",
+//   },
+// };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -33,12 +44,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
         <div>
           <Navbar />
           {children}
-          <SpeedInsights/>
+          <SpeedInsights />
           <Analytics />
-          <FloatingButtons/>
+          <FloatingButtons />
           <Footer />
         </div>
       </body>

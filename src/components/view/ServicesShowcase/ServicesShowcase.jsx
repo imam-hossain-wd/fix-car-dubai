@@ -46,7 +46,8 @@ export function ServicesShowcase() {
                     {displayedServices.map((service, index) => (
                         <Link
                             key={service.slug}
-                            href={`/dubai/services/${service.slug}`}
+                            href={service.slug}
+                            // slug: "/dubai/services/car-ac-repair-dubai"
                             className="group"
                         >
                             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden h-full">

@@ -118,14 +118,15 @@ const MapComponent = () => {
           {/* Quick Action Buttons */}
           <div className="space-y-3">
 
+
             <Link
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 bg-primary hover:bg-primary/90 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group -mt-3"
+              className="flex items-center justify-between p-4 bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group -mt-3"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-black/20 rounded-full">
+                <div className="p-2 bg-white/20 rounded-full">
                   <Navigation className="w-5 h-5" />
                 </div>
                 <span className="font-medium">Open in Maps</span>
