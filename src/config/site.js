@@ -11,6 +11,8 @@ export const SiteConfig = {
   numberCallLink: "tel:$+971568703512",
   whatsappCallLink: "https://wa.me/971568703512",
   location: "Al Karama, Dubai - UAE",
+  latitude: "25.2485261",
+  longitude: "55.3034075",
   coordinate: "25.2485261,55.3034075",
   serviceAreas: [
     {
@@ -30,7 +32,7 @@ export const SiteConfig = {
       "href": "/dubai/area-we-serve/al-hamriya",
       "title": "Best Car Repair in Al Hamriya",
       "slug": "al-hamriya"
-    }, 
+    },
     {
       "name": "Al Jaffiliya",
       "href": "/dubai/area-we-serve/al-jaffiliya",
@@ -158,5 +160,8 @@ export const SiteConfig = {
 }
 
 const {
-  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink,whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
+  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink, whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
 } = SiteConfig;
+
+// schema markup language
+// local businesss schema , orginazation schema , 
