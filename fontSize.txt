@@ -1,0 +1,8 @@
+H1 (The Hero Title):
+text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight
+
+H2 (Section Headings):
+text-2xl md:text-3xl lg:text-4xl font-bold leading-snug
+
+Body Text:
+text-base lg:text-lg text-gray-700 leading-relaxed

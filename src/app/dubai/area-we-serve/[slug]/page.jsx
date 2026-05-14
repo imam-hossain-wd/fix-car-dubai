@@ -1,33 +1,3 @@
-
-
-// import { SiteConfig } from '../../../../config/site';
-// import AreaWeServeDetailPage from '../../../../pages/AreasWeServePages/AreaWeServeDetailPage';
-
-
-// export default async function AreaWeServeDetail({ params }) {
-
-//   const { serviceAreas
-//   } = SiteConfig;
-
-//   const { slug } = await params
-
-//    if (!slug) {
-//     return notFound()
-//   }
-
-//   const area = serviceAreas.find(
-//     (s) => s.slug === slug
-//   )
-
-
-//   if (!area) {
-//     return notFound()
-//   }
-
-//   return <AreaWeServeDetailPage area={area} />
-// }
-
-
 import { SiteConfig } from "@/config/site";
 import AreaWeServeDetailPage from "@/pages/AreasWeServePages/AreaWeServeDetailPage";
 import { notFound } from "next/navigation";
@@ -35,8 +5,9 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({ params }) {
   const { serviceAreas } = SiteConfig;
 
-  const {slug}= await params
+  const { slug } = await params
   const area = serviceAreas.find((s) => s.slug === slug);
+
 
   if (!area) {
     return {
@@ -46,16 +17,16 @@ export async function generateMetadata({ params }) {
   }
 
   const areaName = area.name;
+  const description = area.description;
+  const title = area.title;
   const brand = SiteConfig.brandName;
 
+
   return {
-    title: `${area.title} | ${brand}`,
-    description: `Looking for expert car repair and maintenance in ${areaName}? ${brand} offers mobile car services including battery replacement, AC repair, brake service, oil change, radiator repair, and detailing in ${areaName}, Dubai. 24/7 roadside and home service available.`,
+    title: title,
+    description: description,
     alternates: {
       canonical: `${SiteConfig.url}${area.href}`,
-    },
-    other: {
-      keywords: `car repair ${areaName} Dubai, mobile car service ${areaName}, car battery replacement ${areaName}, car AC repair ${areaName}, brake pad replacement ${areaName}, oil change ${areaName}, radiator repair ${areaName}, alternator repair ${areaName}, car detailing ${areaName}, emergency roadside car service ${areaName}`,
     },
     openGraph: {
       title: `${area.title} | ${brand}`,
@@ -78,8 +49,7 @@ export async function generateMetadata({ params }) {
 
 export default async function AreaWeServeDetail({ params }) {
   const { serviceAreas } = SiteConfig;
-  
-   const {slug}= await params
+  const { slug } = await params
   const area = serviceAreas.find((s) => s.slug === slug);
 
   if (!area) return notFound();

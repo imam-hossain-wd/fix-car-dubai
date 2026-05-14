@@ -2,32 +2,31 @@
 
 import { SiteConfig } from '@/config/site';
 import { bandlogo } from '@/utils/assets';
-import { MapPin, Phone, Mail, ChevronRight, MessageCircle, Navigation, Clock, Car } from 'lucide-react';
+import { MapPin, Phone, Mail, ChevronRight, Navigation } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const MapComponent = () => {
+
   const {
     email,
-    phoneNumber,
-    phoneAction,
     location,
-    coordinate,
-    whatsappCall,
     numberCallLink,
-    whatsappCallLink,
     displayNumber
   } = SiteConfig;
 
   const [isMapLoaded, setIsMapLoaded] = useState(false);
-  const mapUrl = `https://maps.google.com/maps?q=${coordinate}&z=15&output=embed`;
+
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.6556318284447!2d55.305982400000005!3d25.2485213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43c96e6e562f%3A0x49dc867ffb69db4d!2sCar%20Repair%20%26%20Battery%20Replacement%20Service%20Dubai!5e0!3m2!1sen!2sae!4v1769703311745!5m2!1sen!2sae";
+  
+  const redirectMaps = `https://maps.app.goo.gl/TRTrc71UqPULUaKy7`;
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-3">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
           Find Our <span className="text-primary">Location</span>
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -86,12 +85,12 @@ const MapComponent = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Call Us</h4>
-                  <a
+                  <Link
                     href={numberCallLink}
                     className="text-white/80 text-sm mt-1 hover:text-white transition-colors block"
                   >
                     {displayNumber}
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -109,18 +108,13 @@ const MapComponent = () => {
                   </a>
                 </div>
               </div>
-
-
-
             </div>
           </div>
 
           {/* Quick Action Buttons */}
           <div className="space-y-3">
-
-
             <Link
-              href={mapUrl}
+              href={redirectMaps}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-4 bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg group -mt-3"
@@ -147,7 +141,6 @@ const MapComponent = () => {
                 </div>
               </div>
             )}
-
             <iframe
               title="Car Repair & Battery Replacement Dubai"
               src={mapUrl}
@@ -164,7 +157,7 @@ const MapComponent = () => {
             {/* Map Overlay Controls */}
             <div className="absolute top-4 right-4 flex gap-2">
               <button
-                onClick={() => window.open(mapUrl, '_blank')}
+                onClick={() => window.open(redirectMaps, '_blank')}
                 className="bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
                 aria-label="Open in Google Maps"
               >
@@ -192,28 +185,6 @@ const MapComponent = () => {
               <p className="text-sm text-gray-600">Comprehensive vehicle check at our location</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Bottom CTA */}
-      <div className="text-center mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">Need Immediate Assistance?</h3>
-        <p className="text-gray-600 mb-4">Our team is available 24/7 to help with your car repair needs</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={`tel:${phoneAction}`}
-            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium"
-          >
-            <Phone className="w-5 h-5" />
-            Call Now: {phoneNumber}
-          </a>
-          <a
-            href={`https://wa.me/${whatsappCall}`}
-            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors font-medium"
-          >
-            <MessageCircle className="w-5 h-5" />
-            WhatsApp Us
-          </a>
         </div>
       </div>
     </div>

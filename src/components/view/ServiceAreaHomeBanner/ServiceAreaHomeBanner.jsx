@@ -1,8 +1,6 @@
 
-// ServiceAreaHomeBanner
 
-
-import { MapPin, Clock, Star, Shield, ArrowRight, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Clock, Star, Shield, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { serviceAreasBanner } from "@/utils/assets";
@@ -13,71 +11,9 @@ export function ServiceAreaHomeBanner({ area }) {
 
 
   const { serviceareabanner } = serviceAreasBanner;
-  // Static background image (you can replace with your own)
   const backgroundImage = serviceareabanner
 
-  // Dynamic content based on area
-  const areaFeatures = {
-    "al-karama": {
-      highlight: "Central Dubai Location",
-      description: "Fast service in the heart of Dubai with easy access to major roads",
-      responseTime: "15 min"
-    },
-    "oud-metha": {
-      highlight: "Medical District Specialist",
-      description: "Quiet, efficient service near healthcare facilities",
-      responseTime: "20 min"
-    },
-    "al-hamriya": {
-      highlight: "Coastal Area Expert",
-      description: "Specialized service for coastal climate vehicle care",
-      responseTime: "25 min"
-    },
-    "al-jaffiliya": {
-      highlight: "Metro Access Area",
-      description: "Convenient service near Dubai Metro stations",
-      responseTime: "18 min"
-    },
-    "zabeel": {
-      highlight: "Luxury Car Specialist",
-      description: "Premium service for high-end vehicles in upscale areas",
-      responseTime: "22 min"
-    },
-    "al-fahidi": {
-      highlight: "Historic District Service",
-      description: "Expert care for classic and modern vehicles",
-      responseTime: "20 min"
-    },
-    "al-raffa": {
-      highlight: "Commercial Hub Service",
-      description: "Fast turnaround for business district vehicles",
-      responseTime: "16 min"
-    },
-    "al-mina": {
-      highlight: "Port Area Specialist",
-      description: "Marine climate vehicle maintenance experts",
-      responseTime: "28 min"
-    },
-    "al-hudaiba": {
-      highlight: "Beach Proximity Service",
-      description: "Specialized care for beach-area vehicle maintenance",
-      responseTime: "24 min"
-    },
-    "al-jaddaf": {
-      highlight: "Cultural District Expert",
-      description: "Service near Dubai's cultural landmarks",
-      responseTime: "26 min"
-    }
-  };
-
-  const areaData = areaFeatures[area?.slug] || {
-    highlight: "Dubai's Trusted Service",
-    description: "Professional mobile car service across Dubai",
-    responseTime: "30 min"
-  };
-
-  const {
-    contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink, whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
+  const { numberCallLink, whatsappCallLink
   } = SiteConfig;
 
   return (
@@ -108,31 +44,28 @@ export function ServiceAreaHomeBanner({ area }) {
           <div className="text-white space-y-6">
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl mt-5 font-bold leading-tight">
-              Premium Car Service in{" "}
-              <span className="text-amber-300 drop-shadow-lg">{area?.name}</span>
+            <h1 className="text-5xl md:text-5xl mt-5 font-bold leading-tight">
+              {area?.title}
             </h1>
 
             {/* Highlight Feature */}
             <div className="flex w-80 items-center gap-4 px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
               <div className="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></div>
               <p className="text-lg text-amber-200 font-semibold">
-                {areaData.highlight}
+                {area?.highlight}
               </p>
             </div>
 
             {/* Description */}
             <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
-              {areaData.description}. Experience top-quality auto repair services
-              delivered directly to your location in {area?.name} with guaranteed
-              satisfaction and rapid response times.
-            </p>
+              {area?.description}
 
+            </p>
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 py-3">
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/10">
                 <Clock className="w-6 h-6 text-amber-300 mx-auto mb-2" />
-                <p className="text-lg font-bold">{areaData.responseTime}</p>
+                <p className="text-lg font-bold">{area?.responseTime}</p>
                 <p className="text-sm text-white/70">Avg. Response</p>
               </div>
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/10">

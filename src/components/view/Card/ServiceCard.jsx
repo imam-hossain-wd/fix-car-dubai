@@ -37,13 +37,13 @@ export const ServiceCard = ({ service }) => {
 
 
   const {
-    contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, coordinate, location, numberCallLink,whatsappCallLink, operatingHours, displayNumber, description, email, url, brandName, authorName
+    numberCallLink, whatsappCallLink
   } = SiteConfig;
-  
+
 
   return (
-    <div 
-      className="group relative bg-white rounded-2xl border-2 border-gray-100 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+    <div
+      className="group relative bg-white rounded-2xl border-1 border-primary overflow-hidden shadow-xl hover:shadow-xl transition-all duration-300"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -83,7 +83,7 @@ export const ServiceCard = ({ service }) => {
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center">
             <Shield className="h-5 w-5 text-primary mr-2" />
-            <span className="text-sm font-medium text-gray-600">Premium Service</span>
+            <span className="text-[12px] font-medium text-gray-600">Premium Service</span>
           </div>
           {service.rating && (
             <div className="flex items-center bg-amber-50 rounded-full px-2 py-1">
@@ -93,24 +93,17 @@ export const ServiceCard = ({ service }) => {
           )}
         </div>
 
-        <div className="mb-4 space-y-1">
+        <div className="mb-2 space-y-1 ml-1">
           {service?.features?.slice(0, 4).map((feature, i) => (
             <div key={i} className="flex items-start gap-3">
-              <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-              <span className="text-sm text-gray-700">{feature}</span>
+              <div className="h-[5px] w-[5px] rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <span className="text-[12px] text-gray-700">{feature}</span>
             </div>
           ))}
         </div>
 
         {/* Price and main action button */}
-        <div className="flex items-center justify-between mb-3">
-          {service.price && (
-            <div>
-              <span className="text-xs text-gray-500 block">Starting from</span>
-              <span className="font-bold text-primary text-xl">{service.price}</span>
-            </div>
-          )}
-
+        <div className="flex items-center justify-between mb-2">
           <Button className="rounded-lg gap-2 text-xs group-hover:bg-primary/90 transition-all" asChild>
             <Link href={`/dubai/services/${service?.slug}`}>
               Explore
@@ -118,55 +111,56 @@ export const ServiceCard = ({ service }) => {
             </Link>
           </Button>
 
-           {/* Quick action icons */}
-        <div className="flex items-center justify-center gap-3 pt-3 border-t border-gray-100">
-          {/* Call Button */}
-          <Link
-            href={numberCallLink}
-            className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
-            title="Call Now"
-          >
-            <div className="p-2 bg-blue-100 rounded-full group-hover/action:bg-blue-500 transition-colors">
-              <Phone className="h-4 w-4 text-blue-600 group-hover/action:text-white" />
-            </div>
-            <span className="text-xs text-gray-600 mt-1 opacity-0 opacity-100 transition-opacity">
-              Call
-            </span>
-          </Link>
+          {/* Quick action icons */}
+          <div className="flex items-center justify-center gap-3 pt-3 border-t border-gray-100">
+            {/* Call Button */}
+            <Link
+              href={numberCallLink}
+              className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
+              title="Call Now"
+            >
+              <div className="p-2 bg-blue-500 rounded-full  transition-colors">
+                <Phone className="h-4 w-4  text-white" />
+              </div>
 
-          {/* WhatsApp Button */}
-          <Link
-            href={whatsappCallLink}
-            className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
-            title="WhatsApp"
-          >
-            <div className="p-2 bg-green-100 rounded-full group-hover/action:bg-green-500 transition-colors">
-              <MessageCircle className="h-4 w-4 text-green-600 group-hover/action:text-white" />
-            </div>
-            <span className="text-xs text-gray-600 mt-1 opacity-0 opacity-100 transition-opacity">
-              WhatsApp
-            </span>
-          </Link>
+              <span className="text-[11px] text-gray-600 mt-1 opacity-100 transition-opacity">
+                Call now
+              </span>
+            </Link>
 
-          {/* Booking Button */}
-          <Link
-            href="/dubai/book-appointment"
-            className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
-            title="Book Now"
-          >
-            <div className="p-2 bg-primary rounded-full  transition-colors">
-              <Calendar className="h-4 w-4 text-white group-hover/action:text-white" />
-            </div>
-            <span className="text-xs text-gray-600 mt-1 opacity-0 opacity-100 transition-opacity">
-              Book
-            </span>
-          </Link>
-        </div>
+            {/* WhatsApp Button */}
+            <Link
+              href={whatsappCallLink}
+              className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
+              title="WhatsApp"
+            >
+              <div className="p-2 bg-green-500 rounded-full transition-colors">
+                <MessageCircle className="h-4 w-4 text-white" />
+              </div>
+              <span className="text-[11px] text-gray-600 mt-1 opacity-100 transition-opacity">
+                WhatsApp
+              </span>
+            </Link>
+
+            {/* Booking Button */}
+            <Link
+              href="/dubai/book-appointment"
+              className="flex flex-col items-center group/action transition-all duration-300 transform hover:-translate-y-1"
+              title="Book Now"
+            >
+              <div className="p-2 bg-primary rounded-full  transition-colors">
+                <Calendar className="h-4 w-4 text-white group-hover/action:text-white" />
+              </div>
+              <span className="text-[11px] text-gray-600 mt-1 opacity-100 transition-opacity">
+                Book
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Border effect on hover */}
-      <div className="absolute inset-0 rounded-2xl border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      {/* <div className="absolute inset-0 rounded-2xl border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div> */}
     </div>
   );
 };

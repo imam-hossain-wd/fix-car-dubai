@@ -2,7 +2,20 @@
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
 import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb'
+import { CompanyOverview } from '@/components/view/CompanyOverview/CompanyOverview'
+import dynamic from 'next/dynamic';
 
+
+
+// We disable SSR because the component uses client-side hooks and window objects
+const DynamicMap = dynamic(() => import('@/components/ui/shared/Map/MapComponent'), {
+    // ssr: false,
+    loading: () => (
+        <div className="w-full h-[500px] bg-gray-100 animate-pulse rounded-2xl flex items-center justify-center">
+            <p className="text-gray-500 font-medium">Loading Map Module...</p>
+        </div>
+    ),
+});
 
 export default function ContactPage() {
 
@@ -47,21 +60,15 @@ export default function ContactPage() {
 
       <div className="bg-white">
         <GetTouch />
+        <CompanyOverview />
         {/* Map Section */}
-        <section className="py-8 bg-white">
+        <section className="py-5 bg-white">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl text-center mb-12">
-              <h2 className="text-3xl font-bold sm:text-4xl mb-4">
-                Our <span className="text-primary">Service Center</span> in Dubai
-              </h2>
-              <p className="text-lg text-gray-600">
-                Visit our state-of-the-art facility in Al Quoz Industrial Area
-              </p>
-            </div>
-            <MapComponent />
+            <DynamicMap />
           </div>
         </section>
       </div>
+
     </div>
   )
 }

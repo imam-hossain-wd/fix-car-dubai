@@ -30,7 +30,7 @@ export default function NotFound() {
               </Button>
               
               <Button asChild variant="outline" className="gap-2 border-primary text-primary hover:bg-primary/10">
-                <Link href="/services">
+                <Link href="/dubai/services">
                   <Search className="h-4 w-4" />
                   Browse Services
                 </Link>

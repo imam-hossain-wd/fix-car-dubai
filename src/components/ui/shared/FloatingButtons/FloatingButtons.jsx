@@ -33,9 +33,9 @@ export function FloatingButtons() {
   const { numberCallLink, whatsappCallLink } = SiteConfig;
 
   return (
-    <div className="fixed bottom-16 right-6 z-50">
+    <div className="fixed bottom-20 right-6 z-50">
       {/* Social Media Icons (Vertical) */}
-      <div className="flex flex-col items-center gap-3 mb-20">
+      <div className="flex flex-col items-center gap-3 mb-14">
         <Link
           href="https://facebook.com/yourpage"
           className="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110"
@@ -63,7 +63,7 @@ export function FloatingButtons() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="mb-4 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+          className="mb-10 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
           aria-label="Scroll to top"
         >
           <ChevronUp className="h-5 w-5" />

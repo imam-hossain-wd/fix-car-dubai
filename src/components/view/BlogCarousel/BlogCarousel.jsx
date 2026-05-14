@@ -19,7 +19,7 @@ export default function BlogCarousel() {
           <span className="text-amber-600 font-semibold uppercase tracking-wider text-sm">EXPERT GUIDES</span>
           <div className="w-12 h-0.5 bg-amber-400 ml-4"></div>
         </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Car Care Tips for Dubai Drivers</h1>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Car Care Tips for Dubai Drivers</h2>
         <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
           Expert tips, guides, and insights to keep your car performing at its best in Dubai’s extreme climate.
         </p>
@@ -61,7 +61,7 @@ export default function BlogCarousel() {
                   </h2>
 
                   <a
-                    href={`/blog/${blog.slug}`}
+                    href={`/dubai/blog/${blog.slug}`}
                     className="inline-block px-4 py-1 text-sm bg-primary text-white rounded-lg hover:bg-primary transition-colors"
                   >
                     Read More

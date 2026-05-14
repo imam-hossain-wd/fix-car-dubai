@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Clock, Star, Zap, Shield, Wrench } from "lucide-react";
-import { ServiceData } from "@/data/services";
 import { SiteConfig } from "@/config/site";
 
 

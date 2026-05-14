@@ -5,7 +5,7 @@ const nextConfig = {
 
   eslint: {
     ignoreDuringBuilds: true,
-    ignoreBuildErrors: true,
+    // ignoreBuildErrors: true,
   },
   images: {
     domains: [

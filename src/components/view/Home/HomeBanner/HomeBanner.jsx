@@ -8,53 +8,59 @@ import 'swiper/css/pagination'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SiteConfig } from '@/config/site'
-
-
-
+import { homebanner } from '@/utils/assets'
 
 export default function HomeBanner() {
 
+  const { numberCallLink, displayNumber } = SiteConfig;
 
-  const {
-    numberCallLink, displayNumber
-  } = SiteConfig;
-
-
+  const { homebanner1, homebanner2, homebanner3 } = homebanner;
 
   const bannerSlides = [
     {
       id: 1,
-      title: "Premium Car Service & Repair",
-      subtitle: "Expert mechanics with over 15 years of experience",
-      description: "We provide top-quality service for all car makes and models with a 12-month warranty on all repairs.",
-      image: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?_gl=1*w1tjmz*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3NzMkajE5JGwwJGgw",
+      title: "Emergency Mobile Car Repair & Auto Service in Dubai",
+      subtitle: "Professional Onsite Mechanic & Garage-Level Car Repair",
+      description: "24/7 emergency car repair and professional onsite mechanic service anywhere in Dubai.",
+      alt: "Emergency mobile car repair and professional onsite mechanic service in Dubai",
+      image: homebanner1,
       ctaText: "Book Appointment",
       ctaLink: "/dubai/book-appointment"
     },
     {
       id: 2,
-      title: "Brake Service Special",
-      subtitle: "20% Off All Brake Services This Month",
-      description: "Ensure your safety on the road with our professional brake inspection and repair services.",
-      image: "https://images.pexels.com/photos/4116230/pexels-photo-4116230.jpeg?_gl=1*1mrv04*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3NTMkajM5JGwwJGgw",
+      title: "Professional Car Repair Services & Brake Service in Dubai",
+      subtitle: "Trusted Car Mechanic for Safe & Affordable Auto Repair",
+      description: "Expert brake repair and complete car service by a professional mechanic in Dubai.",
+      alt: "Professional car repair and brake auto repair service in Dubai garage",
+      image: homebanner2,
       ctaText: "View Services",
       ctaLink: "/dubai/services"
     },
     {
       id: 3,
-      title: "24/7 Emergency Towing",
-      subtitle: "Fast response times across the city",
-      description: "Broken down? Our team will come to you quickly and get you back on the road.",
-      image: "https://images.pexels.com/photos/4489704/pexels-photo-4489704.jpeg?_gl=1*tohyt1*_ga*NTEwNDIzNzA4LjE3NTI5Mzg5Mjg.*_ga_8JE65Q40S6*czE3NTU3OTM3MzIkbzYkZzEkdDE3NTU3OTM3OTgkajYwJGwwJGgw",
+      title: "24/7 Emergency Car Repair & Onsite Mechanic in Dubai",
+      subtitle: "Fast, Urgent Roadside Assistance & Mobile Garage Support",
+      description: "Urgent auto repair and car mechanic support across Dubai, anytime you need.",
+      alt: "24/7 emergency car repair and urgent onsite mechanic service in Dubai",
+      image: homebanner3,
       ctaText: `Call Now: ${displayNumber}`,
       ctaLink: numberCallLink
     }
   ];
 
 
-
   return (
     <div className="relative w-full h-screen max-h-[500px]">
+
+      {/* ✅ H1 ONLY ONCE */}
+      <div className="w-full absolute top-24 left-1/2 mb-5 -translate-x-1/2 z-30 text-center px-4">
+        <h1 className="text-2xl md:text-4xl font-bold text-white max-w-4xl mx-auto">
+          {/* 24/7 Car Repair & Emergancy Auto Mobile Mechanic Service Dubai */}
+          24/7 Car Repair & Emergency Mobile Mechanic Service in Dubai
+        </h1>
+      </div>
+
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         spaceBetween={0}
@@ -77,56 +83,56 @@ export default function HomeBanner() {
         {bannerSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-[90%]">
-              {/* Background Image with Overlay */}
+
               <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
-              <Image
+              {/* <Image
                 src={slide.image}
-                alt={slide.title}
+                alt={slide.alt}
                 fill
                 className="object-cover"
                 priority
+              /> */}
+
+              <Image
+                src={slide.image}
+                alt={slide.alt}
+                fill
+                placeholder="blur"
+                priority={slide.id === 1}
+                loading={slide.id === 1 ? "eager" : "lazy"}
+                sizes="100vw"
+                className="object-cover"
               />
 
               {/* Content */}
               <div className="relative z-20 flex items-center justify-center h-full px-4">
                 <div className="max-w-4xl mx-auto text-center text-white">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
-                    {slide.title}
-                  </h1>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-amber-500 animate-fade-in-delay">
+
+                  {/* Only subtitles & descriptions inside slider */}
+                  <h2 className="text-lg md:text-xl mb-5 mt-20 font-semibold md:mt-8 text-amber-500">
                     {slide.subtitle}
                   </h2>
-                  <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-200 animate-fade-in-delay-2">
+
+                  {/* <p className="text-sm md:text-lg mb-5 max-w-2xl mx-auto text-slate-200">
                     {slide.description}
-                  </p>
-                  <div className="animate-fade-in-delay-3">
+                  </p> */}
+
+                  <div>
                     <Link
                       href={slide.ctaLink}
-                      className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      className="inline-block -mb-20 bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-8 rounded-lg text-md transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                       {slide.ctaText}
                     </Link>
                   </div>
+
                 </div>
               </div>
+
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Custom navigation arrows */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-12">
-        <button className="home-banner-prev bg-slate-900/50 hover:bg-slate-900/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-amber-500 transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button className="home-banner-next bg-slate-900/50 hover:bg-slate-900/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-amber-500 transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div> */}
     </div>
   )
 }

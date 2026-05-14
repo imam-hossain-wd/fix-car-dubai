@@ -46,9 +46,9 @@ export function AreaWhyChooseUs() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* SEO Optimized Header */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold sm:text-4xl mb-4">
             Why Choose <span className="text-primary">Car Fix Dubai</span> in Your Area?
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Dubai's most trusted mobile car service with guaranteed quality across all neighborhoods
           </p>

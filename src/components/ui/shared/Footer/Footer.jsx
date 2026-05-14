@@ -1,21 +1,19 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Car, Clock, Shield, Award, Wrench } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Shield, Award, Wrench } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 import Image from "next/image";
-import { bandlogo, serviceImages } from "@/utils/assets";
+import { bandlogo } from "@/utils/assets";
+
 
 export function Footer() {
   const {
-    brandName,
-    phoneNumber,
     serviceAreas,
-    services,
     footerhrefs,
     socialLinks,
     email,
-    city
+    city,
+    services
   } = SiteConfig;
-
 
 
   return (
@@ -33,14 +31,32 @@ export function Footer() {
 
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center -my-14 -ml-10 ">
-              <Image className="w-40 h-40" src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="car fix dubai logo" />
-              <h3 className="text-3xl text-primary font-bold -ml-10">Fix Car Dubai</h3>
+
+
+
+
+
+            <Link rel="me noopener"
+              href="https://maps.google.com/maps?cid=5322276743882070861"
+              target="_blank" >
+              <div className="flex flex-col -my-14 -ml-10 ">
+                <Image className="w-40 h-40 " src={bandlogo.carfixdubailogo} width={160} height={160} quality={100} alt="Fix Car Dubai - Official Brand of Car Repair & Battery Replacement Service Dubai" />
+              </div>
+              <h3 className="text-md text-primary font-bold mt-4">Car Repair & Battery Replacement Service Dubai </h3>
             </Link>
 
-            <p className="text-sm font-medium text-gray-300 leading-relaxed mt-5 ">
-              Dubai's premier mobile car repair service, delivering expert solutions 24/7 at your doorstep.
-            </p>
+            <div className=" text-xs leading-relaxed">
+
+
+
+              <h4 className="my-2 italic"> The Digital Home of Fix Car Dubai</h4>
+
+
+              Fix Car Dubai, operating officially as Car Repair & Battery Replacement Service Dubai, is the leading provider of professional, mobile automotive solutions in the UAE. Based in Al Karama, we bring over 13 years of expert experience directly to your doorstep. From emergency roadside assistance and battery replacements to complex mechanical and AC repairs, our certified technicians ensure your vehicle remains reliable, wherever you are in Dubai. Experience the ultimate in automotive convenience—professional service, delivered to you.
+
+              {/* is the leading provider of professional, mobile automotive solutions in the UAE. Based in Al Karama, we bring over a decade of expert experience directly to your doorstep. From emergency roadside assistance and battery replacements to complex mechanical and AC repairs, our certified technicians ensure your vehicle remains reliable, wherever you are in Dubai. Experience the ultimate in automotive convenience—professional service, delivered to you. */}
+
+            </div>
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3 pt-2">
@@ -62,10 +78,10 @@ export function Footer() {
                 </div>
                 <div>
                   <Link
-                    href="tel:+971506695990"
-                    className="text-sm font-medium text-white hover:text-[#F4A723] transition-colors block"
+                    href="tel:+971568703512"
+                    className="text-sm font-medium text-white hover:text-[#F4A723]"
                   >
-                    {phoneNumber}
+                    +971 56 870 3512
                   </Link>
                   <p className="text-xs font-medium text-white mt-1">24/7 Emergency Support</p>
                 </div>
@@ -80,14 +96,26 @@ export function Footer() {
                 </div>
                 <span className="text-sm font-medium text-white hover:text-[#F4A723] transition-colors">{email}</span>
               </Link>
-
-              <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5">
-                <div className="p-2 bg-[#F4A723] rounded-full">
-                  <MapPin className="h-4 w-4 text-white" />
-                </div>
-                <span className="text-sm font-medium text-white">Mobile Service Across Dubai</span>
-              </div>
             </div>
+
+            <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5">
+              <div className="p-2 bg-[#F4A723] rounded-full">
+                <MapPin className="h-4 w-4 text-white" />
+              </div>
+              <span className="text-sm font-medium text-white">
+                Al Karama, Dubai – United Arab Emirates
+              </span>
+            </div>
+
+            <Link
+              href="https://www.google.com/maps?cid=5322276743882070861"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-gray-400 hover:text-[#F4A723] underline ml-2"
+            >
+              View our Google Business Profile
+            </Link>
+
           </div>
 
           {/* Services Column */}
@@ -97,10 +125,10 @@ export function Footer() {
               Our Services
             </h3>
             <nav className="grid grid-cols-1 gap-1">
-              {services.map((service, index) => (
+              {services?.map((service, index) => (
                 <Link
                   key={index}
-                  href={service.slug}
+                  href={`/dubai/services/${service.slug}`}
                   className="text-sm text-gray-300 hover:text-[#F4A723] transition-all p-1 rounded-lg hover:bg-[#F4A723]/10 flex items-center gap-3 group border border-transparent hover:border-[#F4A723]/20"
                 >
                   <div className="w-2 h-2 rounded-full bg-[#F4A723] group-hover:scale-125 transition-transform"></div>
@@ -118,7 +146,7 @@ export function Footer() {
             </h3>
             <div className="grid grid-cols-1 gap-1">
               {serviceAreas.map((location, index) => (
-                <a
+                <Link
                   key={index}
                   href={location.href}
                   className="flex items-center gap-3 p-1 rounded-lg hover:bg-[#F4A723]/10 transition-all border border-transparent hover:border-[#F4A723]/20"
@@ -127,7 +155,7 @@ export function Footer() {
                   <span className="text-sm text-gray-300">
                     {location.name}, {city}
                   </span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -185,11 +213,23 @@ export function Footer() {
             </div>
           </div>
         </div>
+        {/* Local Business NAP for Search Engines */}
+        <div className="sr-only">
+          <span>Business Name: Car Repair & Battery Replacement Service Dubai</span>
+          <span>Brand: Fix Car Dubai</span>
+          <span>Address: Al Karama, Dubai, United Arab Emirates</span>
+          <span>Phone: +971568703512</span>
+          <span>Website: https://www.fixcardubai.com</span>
+          <span>Google Maps CID: 5322276743882070861</span>
+        </div>
+
+
+
 
         {/* Copyright Section */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center relative z-10">
           <p className="text-sm text-gray-400 flex items-center gap-2">
-            © {new Date().getFullYear()} {brandName}. All rights reserved.
+            © {new Date().getFullYear()} Fix Car Dubai – Car Repair & Battery Replacement Service Dubai. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
@@ -198,7 +238,7 @@ export function Footer() {
             <Link href="/terms" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
               Terms of Service
             </Link>
-            <Link href="/sitemap" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
+            <Link href="/sitemap.xml" target="_blank" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
               Sitemap
             </Link>
           </div>

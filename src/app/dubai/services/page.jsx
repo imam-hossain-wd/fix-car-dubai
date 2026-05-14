@@ -4,14 +4,11 @@ import React from 'react'
 
 
 export const metadata = {
-  title: "Car Repair & Services in Dubai | Fix Car Dubai",
-  description: "Fix Car Dubai offers expert car repair, battery replacement, AC repair, oil change, brake service, radiator repair, and detailing across Dubai. 24/7 mobile service at home, office, or roadside.",
+  title: "Car Repair & Emergency Mobile Mechanic Services in Dubai | 24/7 Onsite Auto Repair",
+  description: "Get expert car repair and emergency mobile mechanic services in Dubai. We provide 24/7 onsite auto repair including battery replacement, jump start, AC repair, brake service, radiator repair, oil change, and complete car maintenance across Dubai with fast response.",
   alternates: {
     canonical: `${SiteConfig.url}/dubai/services`,
-  },
-  other: {
-    keywords: "car repair Dubai, mobile car services Dubai, car battery replacement Dubai, car AC repair Dubai, oil change Dubai, brake pad replacement Dubai, radiator repair Dubai, car detailing Dubai, alternator repair Dubai, roadside car service Dubai",
-  },
+  }
 };
 
 

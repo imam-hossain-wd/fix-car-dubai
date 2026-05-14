@@ -1,30 +1,20 @@
 
 
-// import React from 'react'
-
-// export default function ReviewPages() {
-//   return (
-//     <div>ReviewPages</div>
-//   )
-// }
-
 
 'use client'
 
 import React, { useState, useMemo } from 'react';
-import { Star, Filter, Search, Calendar, ThumbsUp, MessageCircle, Share, ChevronDown, ChevronUp, Quote, Sparkles, Check, Heart } from 'lucide-react';
+import { Star,  Search, Calendar, ThumbsUp, Share, ChevronDown, ChevronUp, Quote, Sparkles, Check, Heart } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import Link from 'next/link';
 import { reviews } from '@/constants/reviewdata';
+import { google } from '@/utils/assets';
 
-import googleLogo from '../../assets/googleLogo.png'
-import googleVerifiedBadge from '../../assets/googleVerifiedBadge.png'
-import googleTextIcon from '../../assets/googleTextIcon.png'
+const { googleTextIcon, googleVerifiedBadge}= google;
 
 export default function ReviewPages() {
   const [searchTerm, setSearchTerm] = useState('');

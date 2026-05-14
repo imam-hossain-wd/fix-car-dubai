@@ -39,11 +39,11 @@ export default function BrandsWeService() {
     const clearSearch = () => setSearchQuery("");
 
     return (
-        <section className="py-8 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-6 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                         Brands We <span className="text-transparent bg-clip-text bg-primary">Service & Repair</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">

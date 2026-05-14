@@ -10,9 +10,7 @@ import {
   Zap,
   Droplet,
   Settings,
-  Fan,
-  ChevronRight,
-  Home
+  Fan
 } from 'lucide-react'
 import * as React from 'react'
 import { cn } from '@/lib/utils'
@@ -23,6 +21,7 @@ import Breadcrumb from '@/components/ui/shared/BreadCrumb/BreadCrumb'
 import Link from 'next/link'
 
 function ServiceDetailsPage({ service }) {
+
   const getServiceIcon = React.useCallback(() => {
     const serviceIcons = {
       Battery: <Zap className="h-6 w-6" />,
@@ -45,15 +44,12 @@ function ServiceDetailsPage({ service }) {
   ]
 
 
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
-
       <div className="px-4 mx-auto bg-secondary/90 border-b">
         <Breadcrumb items={breadcrumbItems} />
       </div>
-
-
-
       <section className={cn(
         "relative  py-8 md:py-16 overflow-hidden",
         "backdrop-blur-md"
