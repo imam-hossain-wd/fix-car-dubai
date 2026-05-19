@@ -219,7 +219,7 @@ export function Footer() {
           <span>Brand: Fix Car Dubai</span>
           <span>Address: Al Karama, Dubai, United Arab Emirates</span>
           <span>Phone: +971568703512</span>
-          <span>Website: https://www.fixcardubai.com</span>
+          <span>Website: https://fixcardubai.com</span>
           <span>Google Maps CID: 5322276743882070861</span>
         </div>
 
@@ -232,15 +232,16 @@ export function Footer() {
             © {new Date().getFullYear()} Fix Car Dubai – Car Repair & Battery Replacement Service Dubai. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap.xml" target="_blank" className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors">
-              Sitemap
-            </Link>
+            {footerhrefs.slice(-3).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-xs text-gray-400 hover:text-[#F4A723] transition-colors"
+                target={link.href.endsWith('.xml') ? "_blank" : undefined}
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

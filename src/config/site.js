@@ -191,6 +191,7 @@ export const SiteConfig = {
     { title: "Contact", href: "/dubai/contact" },
     { title: "Blog", href: "/dubai/blog" },
     { title: "Privacy Policy", href: "/dubai/privacy" },
+    { title: "Terms of Service", href: "/dubai/terms" },
     { title: "Sitemap", href: "/sitemap.xml" }
   ],
 

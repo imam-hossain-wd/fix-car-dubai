@@ -94,6 +94,12 @@ export const metadata = {
   verification: {
     google: "6ZILuBDzgWNdHqeSTWIMSTG8ZbnR19Gw-8hG90gFFlQ",
   },
+  other: {
+    "geo.region": "AE-DU",
+    "geo.placename": "Dubai",
+    "geo.position": `${SiteConfig.latitude};${SiteConfig.longitude}`,
+    "ICBM": `${SiteConfig.latitude}, ${SiteConfig.longitude}`,
+  },
 };
 
 

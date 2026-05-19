@@ -51,6 +51,18 @@ export default async function sitemap() {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/dubai/terms`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/sitemap.xml`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.1,
+    },
   ];
 
   /**

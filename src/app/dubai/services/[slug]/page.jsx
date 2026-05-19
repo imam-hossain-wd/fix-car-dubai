@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: service.metaTitle || `${service.name} in Dubai | Fix Car Dubai`,
     description: service.metaDescription || service?.intro?.content,
     alternates: {
-      canonical: `https://www.fixcardubai.com/dubai/services/${service.slug}`,
+      canonical: `${SiteConfig.url}/dubai/services/${service.slug}`,
     }
   }
 }

@@ -4,8 +4,8 @@ import HomePage from "@/pages/HomePage/HomePage";
 // 24/7 Car Repair & Emergancy Auto Mobile Mechanic Service Dubai
 
 export const metadata = {
-  title: "Car Repair & Mobile Mechanic in Dubai | 24/7 Onsite Emergancy Auto Repair Service",
-  description: "Professional car repair and mobile mechanic service in Dubai. We provide 24/7 onsite car repair, emergency car repair, battery replacement, and complete auto repair solutions. Fast response from Al Karama with reliable technicians and transparent pricing.",
+  title: "Car Repair & Mobile Mechanic in Dubai | 24/7 Onsite Emergency Auto Repair Service",
+  description: "Fix Car Dubai provides 24/7 onsite car repair and mobile mechanic services in Dubai. We offer emergency car repair, battery replacement, jump starts, and complete auto solutions. Fast response from Al Karama with reliable technicians and transparent pricing.",
   verification: {
     google: "6ZILuBDzgWNdHqeSTWIMSTG8ZbnR19Gw-8hG90gFFlQ"
   },

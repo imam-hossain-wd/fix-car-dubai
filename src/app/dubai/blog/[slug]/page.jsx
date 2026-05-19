@@ -24,6 +24,7 @@
 import { blogdata } from '@/data/blogdata'
 import BlogDetailPage from '@/pages/BlogPage/BlogDetailPage'
 import { notFound } from 'next/navigation'
+import { SiteConfig } from '@/config/site'
 
 // ✅ Generate metadata dynamically
 export async function generateMetadata({ params }) {
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }) {
 
     if (!blog) {
         return {
-            title: "Blog Not Found | 24CarServiceDubai",
+            title: "Blog Not Found | Fix Car Dubai",
             description: "The blog you are looking for does not exist.",
         }
     }
@@ -41,12 +42,12 @@ export async function generateMetadata({ params }) {
         title: blog.meta_title || blog.title,
         description: blog.meta_description || blog.excerpt,
         alternates: {
-            canonical: `https://fixcardubai.com/dubai/blog/${blog.slug}`,
+            canonical: `${SiteConfig.url}/dubai/blog/${blog.slug}`,
         },
         openGraph: {
             title: blog.meta_title || blog.title,
             description: blog.meta_description || blog.excerpt,
-            url: `https://fixcardubai.com/dubai/blog/${blog.slug}`,
+            url: `${SiteConfig.url}/dubai/blog/${blog.slug}`,
             type: "article",
             publishedTime: blog.date,
             authors: [blog.author],
