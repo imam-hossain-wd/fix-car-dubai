@@ -9,15 +9,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import Link from 'next/link';
-import { reviews } from '@/constants/reviewdata';
 import { Button } from '@/components/ui/button';
 import { google } from '@/utils/assets';
+import { reviews } from '@/data/review';
 
 const { googleLogo, googleTextIcon, googleVerifiedBadge } = google;
 
 export default function Reviews() {
   return (
-    <section className="relative py-8 overflow-hidden bg-gradient-to-b from-white to-gray-50/30">
+    <section className="relative py-8 overflow-hidden bg-linear-to-b from-white to-gray-50/30">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
@@ -34,7 +34,7 @@ export default function Reviews() {
         </div>
 
         {/* Rating Summary - Compact */}
-        <div className="bg-gradient-to-r from-gray-900 to-primary rounded-2xl p-5 text-white shadow-xl mb-8 w-[50%] mx-auto">
+        <div className="bg-linear-to-r from-gray-900 to-primary rounded-2xl p-5 text-white shadow-xl mb-8 w-[50%] mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-5">
 
             {/* Left */}
@@ -91,7 +91,7 @@ export default function Reviews() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="!overflow-visible"
+            className="overflow-visible!"
           >
             {reviews.slice(0, 6).map((review, i) => (
               <SwiperSlide key={i}>
@@ -102,7 +102,7 @@ export default function Reviews() {
 
                   <CardHeader className="pb-0 pt-4 px-4">
                     <div className="flex items-center gap-2">
-                      <div className="bg-gradient-to-br from-primary to-green-600 rounded-xl w-10 h-10 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                      <div className="bg-linear-to-br from-primary to-green-600 rounded-xl w-10 h-10 flex items-center justify-center text-white font-bold text-sm shadow-md">
                         {review.name.charAt(0)}
                       </div>
                       <div>

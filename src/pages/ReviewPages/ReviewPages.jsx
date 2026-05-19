@@ -11,8 +11,8 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Image from 'next/image';
 import Link from 'next/link';
-import { reviews } from '@/constants/reviewdata';
 import { google } from '@/utils/assets';
+import { reviews } from '@/data/review';
 
 const { googleTextIcon, googleVerifiedBadge}= google;
 
@@ -108,9 +108,9 @@ export default function ReviewPages() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
       {/* Header Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-primary text-white py-20 overflow-hidden">
+      <section className="relative bg-linear-to-r from-gray-900 to-primary text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
