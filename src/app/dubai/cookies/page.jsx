@@ -1,21 +1,20 @@
-
-
 import { SiteConfig } from "@/config/site";
-import TermsOfService from "@/pages/TermsOfService/TermsOfService";
+import CookiePolicy from "@/pages/CookiePolicy/CookiePolicy";
+
 
 export const metadata = {
-  title: "Terms of Service | Fix Car Dubai",
-  description: "Read our terms of service to understand the rules, responsibilities, and conditions for using Fix Car Dubai's mobile car repair services.",
+  title: "Cookie Policy | Fix Car Dubai",
+  description: "Learn how Fix Car Dubai uses cookies and similar technologies to enhance your browsing experience and improve our services.",
   alternates: {
-    canonical: `${SiteConfig.url}/dubai/terms`,
+    canonical: `${SiteConfig.url}/dubai/cookies`,
   },
 };
 
 // Structured data for SEO
-export const generateStructuredData = () => ({
+const generateStructuredData = () => ({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Terms of Service",
+  "name": "Cookie Policy",
   "description": metadata.description,
   "publisher": {
     "@type": "Organization",
@@ -32,16 +31,14 @@ export const generateStructuredData = () => ({
   "isPartOf": { "@type": "WebSite", "url": SiteConfig.url }
 });
 
-export default function Terms() {
+export default function Cookies() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ 
-          __html: JSON.stringify({ /* your structured data */ }) 
-        }} 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
       />
-      <TermsOfService />
+      <CookiePolicy />
     </>
   );
 }
