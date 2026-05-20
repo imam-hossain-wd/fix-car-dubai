@@ -11,7 +11,7 @@ export default function StructuredData() {
                 "url": "https://fixcardubai.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://www.fixcardubai.com/logo.png" // Use your actual logo URL
+                    "url": "https://fixcardubai.com/logo.png" // Use your actual logo URL
                 },
                 "sameAs": [
                     "https://www.facebook.com/carrepairdxb",

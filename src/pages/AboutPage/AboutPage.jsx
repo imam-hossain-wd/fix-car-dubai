@@ -56,7 +56,8 @@ export default function AboutPage() {
             Brand Name: <strong>Fix Car Dubai</strong><br />
             Location: Al Karama, Dubai – United Arab Emirates<br />
             Phone: <Link href="tel:+971568703512" className="text-primary">+971 56 870 3512</a><br />
-            Website: <Link href="https://www.fixcardubai.com" className="text-primary">https://www.fixcardubai.com</a><br />
+            Website: <Link href="https://fixcardubai.com" className="text-primary">https://fixcardubai.com</Link><br />
+
             Google Maps:{" "}
             <Link
               href="https://www.google.com/maps?cid=5322276743882070861"
@@ -144,9 +145,9 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 mb-1">Website</p>
-                  <Link href="https://www.fixcardubai.com" target="_blank" rel="noopener noreferrer"
+                  <Link href="https://fixcardubai.com" target="_blank" rel="noopener noreferrer"
                     className="font-semibold text-primary hover:text-primary/80 transition-colors">
-                    https://www.fixcardubai.com
+                    https://fixcardubai.com
                   </Link>
                 </div>
                 <div>
