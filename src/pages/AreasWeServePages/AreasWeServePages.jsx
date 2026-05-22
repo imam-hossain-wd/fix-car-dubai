@@ -1,7 +1,6 @@
 import Breadcrumb from "@/components/ui/shared/BreadCrumb/BreadCrumb";
 import { AreaWhyChooseUs } from "@/components/view/AreaWhyChooseus/AreaWhyChooseus";
 import { ServiceAreas } from "@/components/view/ServiceArea/ServiceAreas";
-import { ServicesShowcase } from "@/components/view/ServicesShowcase/ServicesShowcase";
 import { SiteConfig } from "@/config/site";
 import { Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
@@ -64,14 +63,6 @@ export default function AreasWeServePages() {
           <ServiceAreas />
         </div>
       </section>
-
-      <section className="py-3 bg-white">
-        <div className="">
-          <ServicesShowcase />
-        </div>
-      </section>
-
-
       <AreaWhyChooseUs />
 
 

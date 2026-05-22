@@ -1,4 +1,4 @@
-import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
+import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaComponent/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
 import BrandsWeService from "../../components/view/BrandsWeServe/BrandsWeServe";
 import { FAQSection } from "../../components/view/FAQSection/FAQSection";
 import FeaturedServices from "../../components/view/FeaturedServices/FeaturedServices";

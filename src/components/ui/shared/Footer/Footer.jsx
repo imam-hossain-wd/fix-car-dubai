@@ -32,10 +32,6 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
 
-
-
-
-
             <Link rel="me noopener"
               href="https://maps.google.com/maps?cid=5322276743882070861"
               target="_blank" >

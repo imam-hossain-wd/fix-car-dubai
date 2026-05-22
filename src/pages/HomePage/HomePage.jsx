@@ -7,21 +7,19 @@ import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
-import BrandsWeService from '@/components/view/BrandsWeServe/BrandsWeServe'
 import BlogCarousel from '@/components/view/BlogCarousel/BlogCarousel'
 import { OurMission } from '@/components/view/OurMission/OurMission'
 import dynamic from 'next/dynamic';
 import FaqStructuredData from '@/seo/schemas/FaqStructuredData'
 import { OurVision } from '@/components/view/OurVision/OurVision'
 import { BatteryBrands } from '@/components/view/BatteryBrands/BatteryBrands'
-// import { BatteryBrands } from '@/components/view/BatteryBrands/BatteryBrands'
 
 
 
 const DynamicMap = dynamic(() => import('@/components/ui/shared/Map/MapComponent'), {
     // ssr: false,
     loading: () => (
-        <div className="w-full h-[500px] bg-gray-100 animate-pulse rounded-2xl flex items-center justify-center">
+        <div className="w-full h-125 bg-gray-100 animate-pulse rounded-2xl flex items-center justify-center">
             <p className="text-gray-500 font-medium">Loading Map Module...</p>
         </div>
     ),
@@ -35,19 +33,13 @@ export default function HomePage() {
             <FaqStructuredData />
             <HomeBanner />
             <FeaturedServices />
-            {/* <FeaturedServices /> */}
             <WhoWeAre />
             <OurMission />
             <OurVision />
             <WhyChooseUs />
             <BatteryBrands />
-            {/* <BatteryBrands /> */}
-            <BrandsWeService />
-            {/* <WhyChooseUs /> */}
-            {/* <TrustedByDubai /> */}
             <TrustedService />
             <Reviews />
-            {/* <BookAppointmentForm /> */}
             <BlogCarousel />
             <DynamicMap />
             <GetTouch />
