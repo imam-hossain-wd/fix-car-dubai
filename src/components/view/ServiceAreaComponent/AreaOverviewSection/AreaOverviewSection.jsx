@@ -18,7 +18,7 @@ import {
   ThumbsUp,
 } from "lucide-react";
 
-export function AreaOverviewSection({ area }) {
+export function AreaOverview({ area }) {
   const highlights = area?.overviewSection?.highlights || [];
   const name = area?.name || "Al Karama";
   const city = area?.city || "Dubai";
