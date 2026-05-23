@@ -46,7 +46,8 @@
 
 
 
-import { AreaOverviewSection } from "@/components/view/ServiceAreaComponent/AreaOverviewSection/AreaOverviewSection";
+import { AreaOverview, AreaOverviewSection } from "@/components/view/ServiceAreaComponent/AreaOverviewSection/AreaOverviewSection";
+import { AreaServicesGrid } from "@/components/view/ServiceAreaComponent/AreaServicesGrid/AreaServicesGrid";
 import { EmergencyContent } from "@/components/view/ServiceAreaComponent/EmergencyContentSection/EmergencyContentSection";
 import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaComponent/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
 
@@ -64,6 +65,9 @@ export default function AreaWeServeDetailPage({
         area={area}
       />
       <EmergencyContent
+        area={area}
+      />
+      <AreaServicesGrid
         area={area}
       />
 
