@@ -415,7 +415,7 @@ export function NearbyLandmarks({ area }) {
     };
 
     return (
-        <section className="w-full py-16 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 via-white to-primary/3">
+        <section className="w-full py-6 bg-gradient-to-b from-primary/5 via-white to-primary/3">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
                 {/* Section Header */}

@@ -52,6 +52,7 @@ import { AreaServicesGrid } from "@/components/view/ServiceAreaComponent/AreaSer
 import { CustomerProblems } from "@/components/view/ServiceAreaComponent/CustomerProblems/CustomerProblems";
 import { EmergencyContent } from "@/components/view/ServiceAreaComponent/EmergencyContentSection/EmergencyContentSection";
 import { InternalLinks } from "@/components/view/ServiceAreaComponent/InternalLinks/InternalLinks";
+import { NearbyAreas } from "@/components/view/ServiceAreaComponent/NearbyAreas/NearbyAreas";
 import { NearbyLandmarks } from "@/components/view/ServiceAreaComponent/NearbyLandmarks/NearbyLandmarks";
 import { ServiceAreaFaq } from "@/components/view/ServiceAreaComponent/ServiceAreaFaq/ServiceAreaFaq";
 import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaComponent/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
@@ -95,9 +96,9 @@ export default function AreaWeServeDetailPage({
       <AreaReview
         area={area}
       />
-
-
-
+      <NearbyAreas
+        area={area}
+      />
     </div>
   );
 }

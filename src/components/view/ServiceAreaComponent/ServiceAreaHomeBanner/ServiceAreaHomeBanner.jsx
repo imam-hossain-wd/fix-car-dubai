@@ -225,15 +225,15 @@ export function ServiceAreaHomeBanner({ area }) {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/70" />
 
         {/* Secondary Gradient for Depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-transparent to-transparent opacity-60" />
 
         {/* Main Content Container */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="min-h-[700px] md:min-h-[800px] lg:min-h-[900px] flex flex-col justify-center">
+          <div className="min-h-175 md:min-h-200 lg:min-h-225 flex flex-col justify-center">
             <div className="max-w-4xl">
 
               {/* Trust Badge - Top Indicator */}
-              <div className="mb-6">
+              <div className="mb-3">
                 <div className="inline-flex items-center gap-2.5 bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-full px-4 py-2">
                   <ShieldCheck className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium text-gray-200 tracking-wide">
@@ -247,14 +247,14 @@ export function ServiceAreaHomeBanner({ area }) {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight lg:leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight lg:leading-tight">
                 {area?.hero?.title ||
                   `24/7 Car Repair & Mobile Mechanic Service in ${area?.name} Dubai`
                 }
               </h1>
 
               {/* Subtitle / Description */}
-              <p className="mt-6 text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl">
+              <p className="mt-3 text-base md:text-lg text-gray-300 leading-relaxed max-w-3xl">
                 {area?.hero?.subtitle ||
                   `Professional on-site car repair, emergency battery replacement, roadside assistance, diagnostics, AC repair, oil change, brake service, and mobile mechanic support across ${area?.name}.`
                 }

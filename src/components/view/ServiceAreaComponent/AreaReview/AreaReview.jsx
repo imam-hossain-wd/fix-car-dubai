@@ -30,7 +30,7 @@ export function AreaReview({ area }) {
   const fiveStarCount = reviews.filter(r => r.rating === 5).length;
 
   return (
-    <section className="w-full py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="w-full py-6 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         
         {/* Section Header */}

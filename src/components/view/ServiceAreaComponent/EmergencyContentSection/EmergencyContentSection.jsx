@@ -23,6 +23,7 @@ import {
   Settings,
   AlertCircle,
 } from "lucide-react";
+import { homebanner } from "@/utils/assets";
 
 export function EmergencyContent({ area }) {
   const emergencyServices = area?.emergencyContentSection?.emergencyServices || [];
@@ -31,7 +32,7 @@ export function EmergencyContent({ area }) {
   const responseTime = area?.hero?.stats?.find(s => s?.label === "Response Time")?.value || "15-20";
 
   return (
-    <section className="w-full py-16 md:py-20 lg:py-24 bg-gradient-to-br from-red-50 via-orange-50/30 to-white">
+    <section className="w-full py-6 bg-gradient-to-br from-red-50 via-orange-50/30 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         
         {/* Section Header */}
@@ -153,7 +154,7 @@ export function EmergencyContent({ area }) {
             <div className="relative rounded-2xl overflow-hidden shadow-xl mb-6">
               <div className="aspect-[4/3] relative bg-gray-800">
                 <Image
-                  src={area?.images?.hero || "/images/emergency-roadside-assistance.jpg"}
+                  src={homebanner?.homebanner1 || "/images/emergency-roadside-assistance.jpg"}
                   alt={`Emergency roadside assistance and mobile mechanic responding to car breakdown in ${name} ${city} - 24/7 support`}
                   fill
                   className="object-cover"
