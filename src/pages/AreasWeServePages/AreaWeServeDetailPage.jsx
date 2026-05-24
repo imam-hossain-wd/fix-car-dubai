@@ -47,9 +47,13 @@
 
 
 import { AreaOverview, AreaOverviewSection } from "@/components/view/ServiceAreaComponent/AreaOverviewSection/AreaOverviewSection";
+import { AreaReview } from "@/components/view/ServiceAreaComponent/AreaReview/AreaReview";
 import { AreaServicesGrid } from "@/components/view/ServiceAreaComponent/AreaServicesGrid/AreaServicesGrid";
 import { CustomerProblems } from "@/components/view/ServiceAreaComponent/CustomerProblems/CustomerProblems";
 import { EmergencyContent } from "@/components/view/ServiceAreaComponent/EmergencyContentSection/EmergencyContentSection";
+import { InternalLinks } from "@/components/view/ServiceAreaComponent/InternalLinks/InternalLinks";
+import { NearbyLandmarks } from "@/components/view/ServiceAreaComponent/NearbyLandmarks/NearbyLandmarks";
+import { ServiceAreaFaq } from "@/components/view/ServiceAreaComponent/ServiceAreaFaq/ServiceAreaFaq";
 import { ServiceAreaHomeBanner } from "@/components/view/ServiceAreaComponent/ServiceAreaHomeBanner/ServiceAreaHomeBanner";
 import { WhyChooseUs } from "@/components/view/ServiceAreaComponent/WhyChooseUs/WhyChooseUs";
 
@@ -78,7 +82,20 @@ export default function AreaWeServeDetailPage({
       <CustomerProblems
         area={area}
       />
-     
+
+      <NearbyLandmarks
+        area={area}
+      />
+      <ServiceAreaFaq
+        area={area}
+      />
+      <InternalLinks
+        area={area}
+      />
+      <AreaReview
+        area={area}
+      />
+
 
 
     </div>
